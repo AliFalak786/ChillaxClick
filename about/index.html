@@ -1,1 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Learn what Chillax provides, how its tools work and the principles behind the website.">
+<meta name="theme-color" content="#0B0F0E">
+<title>About Chillax</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="canonical" href="https://chillax.click/about/">
+<style>
+:root{--bg:#0B0F0E;--surface:#121817;--surface-2:#17201D;--accent:#7DE2B8;--accent-2:#5FD6A2;--accent-soft:#16352B;--text:#F2F5F3;--muted:#9AA7A1;--border:#24302B;--danger:#ff8e8e;--shadow:0 18px 60px rgba(0,0,0,.28);--radius:18px;--max:1180px}
+html.light{--bg:#F6F8F7;--surface:#FFF;--surface-2:#EEF3F0;--accent:#3DBB82;--accent-2:#2DA66F;--accent-soft:#E2F5EC;--text:#18201C;--muted:#68736D;--border:#E1E7E3;--shadow:0 18px 55px rgba(25,45,36,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .25s,color .25s}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}.container{width:min(calc(100% - 40px),var(--max));margin:auto}.hidden{display:none!important}
+header{position:sticky;top:0;z-index:100;backdrop-filter:blur(18px);background:color-mix(in srgb,var(--bg) 88%,transparent);border-bottom:1px solid var(--border)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.04em;font-size:23px}.brand-mark{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--accent);color:#092018;box-shadow:0 0 28px color-mix(in srgb,var(--accent) 28%,transparent);font-size:19px}.brand span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:5px}.nav-links a,.nav-btn{border:0;background:none;color:var(--muted);padding:10px 12px;border-radius:10px;transition:.2s}.nav-links a:hover,.nav-btn:hover{color:var(--text);background:var(--surface)}.nav-actions{display:flex;align-items:center;gap:8px}.icon-btn{width:40px;height:40px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:11px}.btn{border:0;border-radius:12px;padding:11px 17px;font-weight:750;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn-primary{background:var(--accent);color:#092018}.btn-primary:hover{background:var(--accent-2);transform:translateY(-1px)}.btn-secondary{background:var(--surface);border:1px solid var(--border);color:var(--text)}.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}.menu-btn{display:none}
+.hero{padding:92px 0 70px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:var(--accent);opacity:.08;filter:blur(90px);right:-180px;top:-180px;pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid var(--border);background:var(--surface);border-radius:999px;color:var(--accent);font-size:13px;font-weight:750}.dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px var(--accent)}h1{font-size:clamp(44px,6.2vw,78px);line-height:1.02;letter-spacing:-.065em;margin:22px 0 20px}h1 em{font-style:normal;color:var(--accent)}.hero-copy{font-size:18px;color:var(--muted);max-width:650px}.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.trust-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:13px}.trust-row span{display:flex;gap:6px;align-items:center}
+.hero-card{background:linear-gradient(145deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:28px;padding:22px;box-shadow:var(--shadow)}.dashboard-preview{border:1px solid var(--border);border-radius:21px;overflow:hidden;background:var(--bg)}.preview-top{padding:16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between}.preview-title{font-weight:800}.preview-small{color:var(--muted);font-size:12px}.mood-row{padding:22px}.mood-row h3{margin:0 0 14px}.moods{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.mood{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:14px;padding:13px 4px;text-align:center;font-size:22px}.mood small{display:block;font-size:10px;color:var(--muted);margin-top:4px}.meter{margin-top:16px}.meter-line{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.bar{height:8px;background:var(--surface);border-radius:99px;margin-top:7px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent);border-radius:99px}.suggestion{margin:0 22px 22px;padding:16px;border:1px solid var(--border);background:var(--accent-soft);border-radius:15px}.suggestion b{display:block;margin-bottom:4px}.suggestion p{margin:0;color:var(--muted);font-size:13px}
+section{padding:76px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.section-head h2{margin:0;font-size:34px;letter-spacing:-.04em}.section-head p{margin:7px 0 0;color:var(--muted);max-width:620px}.text-link{color:var(--accent);font-weight:750}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;transition:.2s}.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 48%,var(--border));box-shadow:var(--shadow)}.tool-icon{width:48px;height:48px;border-radius:14px;background:var(--accent-soft);display:grid;place-items:center;font-size:22px;margin-bottom:17px}.card h3{margin:0 0 7px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}.card-footer{margin-top:20px;display:flex;justify-content:space-between;align-items:center}.pill{font-size:11px;padding:5px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:750}.open-tool{color:var(--accent);font-size:13px;font-weight:750;border:0;background:none}
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.category{padding:19px;background:var(--surface);border:1px solid var(--border);border-radius:16px;display:flex;align-items:center;gap:13px}.category:hover{border-color:var(--accent)}.category-icon{font-size:23px}.category b{font-size:14px}.category small{display:block;color:var(--muted)}
+.tool-section{background:color-mix(in srgb,var(--surface) 48%,var(--bg))}.search{width:100%;padding:15px 17px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:14px;outline:none;margin-bottom:18px}.search:focus{border-color:var(--accent)}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}.modal-backdrop.show{display:flex}.modal{width:min(720px,100%);max-height:90vh;overflow:auto;background:var(--surface);border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow);padding:24px}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:18px}.modal-head h2{margin:0}.close{border:1px solid var(--border);background:var(--bg);color:var(--text);width:38px;height:38px;border-radius:10px}.field{margin:14px 0}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}.field input,.field textarea,.field select{width:100%;padding:12px 13px;border:1px solid var(--border);background:var(--bg);color:var(--text);border-radius:11px;outline:none}.field textarea{min-height:120px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent)}.result{margin-top:16px;padding:15px;border:1px solid var(--border);border-radius:12px;background:var(--bg);white-space:pre-wrap}.auth-switch{text-align:center;color:var(--muted);font-size:13px;margin-top:14px}.auth-switch button{border:0;background:none;color:var(--accent)}.error{color:var(--danger);font-size:13px;margin-top:8px}.success{color:var(--accent);font-size:13px;margin-top:8px}
+.cta{text-align:center;padding:65px 25px;border:1px solid var(--border);border-radius:28px;background:linear-gradient(145deg,var(--surface),var(--accent-soft))}.cta h2{font-size:40px;letter-spacing:-.045em;margin:0 0 10px}.cta p{color:var(--muted);max-width:600px;margin:0 auto 24px}
+.page{padding:70px 0}.page-narrow{max-width:850px;margin:auto}.page h1{font-size:clamp(38px,5vw,58px);margin:0 0 12px}.page h2{margin-top:34px;font-size:25px}.page h3{margin-top:25px}.page p,.page li{color:var(--muted)}.page-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px}.notice{padding:15px 17px;border:1px solid var(--border);background:var(--accent-soft);border-radius:13px;color:var(--muted);margin:20px 0}.back-link{display:inline-flex;margin-bottom:22px;color:var(--accent);font-weight:750}
+.dashboard-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:24px 0}.stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}.stat strong{display:block;font-size:28px}.stat span{color:var(--muted);font-size:13px}.profile-box{display:flex;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:22px}.avatar{width:55px;height:55px;border-radius:16px;background:var(--accent);color:#092018;display:grid;place-items:center;font-size:22px;font-weight:850}
+footer{border-top:1px solid var(--border);padding:50px 0 25px}.footer-grid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:35px}.footer-brand p{color:var(--muted);max-width:360px;font-size:14px}footer h4{margin:0 0 13px;font-size:14px}footer a{display:block;color:var(--muted);font-size:13px;margin:8px 0}footer a:hover{color:var(--accent)}.footer-bottom{border-top:1px solid var(--border);margin-top:35px;padding-top:20px;display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:12px}
+.toast{position:fixed;right:20px;bottom:20px;z-index:300;background:var(--surface);border:1px solid var(--border);padding:13px 16px;border-radius:12px;box-shadow:var(--shadow);transform:translateY(30px);opacity:0;pointer-events:none;transition:.25s}.toast.show{transform:none;opacity:1}
+.dashboard-wide{width:min(calc(100% - 40px),1100px);margin:0 auto}.dashboard-hero{display:flex;justify-content:space-between;gap:25px;align-items:center;margin-bottom:25px}.profile-box.compact{margin:0;min-width:250px}.dashboard-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-bottom:18px}.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.quick-action,.mode-card{border:1px solid var(--border);background:var(--surface);border-radius:14px;padding:16px;text-align:left;color:inherit;cursor:pointer;transition:.2s}.quick-action:hover,.mode-card:hover{transform:translateY(-2px);border-color:var(--accent)}.quick-action span,.mode-card span{font-size:24px;display:block;margin-bottom:9px}.quick-action b,.mode-card b{display:block}.quick-action small,.mode-card small{display:block;color:var(--muted);margin-top:4px}.activity-list{display:grid;gap:2px}.activity-item{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--border);font-size:13px}.activity-item small{color:var(--muted)}.empty-state{padding:15px;border:1px dashed var(--border);border-radius:12px;color:var(--muted);font-size:13px}.mode-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.mode-card{text-decoration:none}.account-card{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:18px}.blog-card{text-decoration:none;color:inherit}.blog-card .text-link{display:inline-block;margin-top:8px}.check-row{display:flex;align-items:center;gap:10px;padding:13px;border:1px solid var(--border);border-radius:12px;margin:8px 0;cursor:pointer}.check-row input{width:18px;height:18px}@media(max-width:900px){.dashboard-grid{grid-template-columns:1fr}.mode-grid{grid-template-columns:repeat(2,1fr)}.dashboard-hero{align-items:flex-start;flex-direction:column}.profile-box.compact{width:100%}}@media(max-width:600px){.dashboard-wide{width:min(calc(100% - 28px),1100px)}.quick-grid,.mode-grid{grid-template-columns:1fr}.account-card{display:block}.account-card>div:last-child{margin-top:14px}.dashboard-hero h1{font-size:38px}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-card{max-width:650px}.grid{grid-template-columns:repeat(2,1fr)}.category-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1.5fr 1fr 1fr}.nav-links{display:none;position:absolute;left:20px;right:20px;top:70px;padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:15px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.menu-btn{display:block}}
+@media(max-width:600px){.container{width:min(calc(100% - 28px),var(--max))}.hero{padding:65px 0 45px}section{padding:55px 0}h1{font-size:47px}.hero-buttons .btn{width:100%}.grid,.category-grid,.dashboard-stats{grid-template-columns:1fr}.section-head{display:block}.section-head .text-link{display:inline-block;margin-top:10px}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}.nav-actions .btn-secondary{display:none}.page{padding:48px 0}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="brand" href="/" data-route="home" aria-label="Chillax home"><div class="brand-mark">✦</div>Chill<span>ax</span></a>
+<nav class="nav-links" id="navLinks">
+<a href="/" data-route="home">Home</a>
+<a href="/ai-tools/" data-route="all-tools">AI Tools</a>
+<a href="/free-tools/" data-route="free-tools">Free Tools</a>
+<a href="/categories/" data-route="categories">Categories</a>
+<a href="/blog/" data-route="learn">Blog</a>
+<a href="/about/">About Us</a>
+</nav>
+<div class="nav-actions">
+<button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☀️</button>
+<button class="btn btn-secondary" id="navSignIn">Sign in</button>
+<button class="btn btn-primary" id="navGetStarted">Get started</button>
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</div>
+</div>
+</header>
 
+<main id="app"></main>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="brand" href="/"><div class="brand-mark">✦</div>Chill<span>ax</span></a>
+<p>Free AI and everyday tools designed to make life easier, calmer and a little more organized.</p>
+</div>
+<div>
+<h4>Tools</h4>
+<a href="/ai-tools/" data-route="all-tools">AI Tools</a><a href="/free-tools/" data-route="free-tools">Free Tools</a><a href="/categories/" data-route="categories">Categories</a>
+</div>
+<div>
+<h4>Company</h4>
+<a href="/about/">About Us</a><a href="/contact/">Contact</a><a href="/dashboard/">Dashboard</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms &amp; Conditions</a><a href="/cookie-policy/">Cookie Policy</a><a href="/disclaimer/">Disclaimer</a><a href="/editorial-policy/">Editorial Policy</a>
+</div>
+</div>
+<div class="footer-bottom"><span>© <span id="year"></span> Chillax. All rights reserved.</span><span>Smart Tools. Zero Stress.</span></div>
+</div>
+</footer>
+
+<div class="modal-backdrop" id="toolModal"><div class="modal"><div class="modal-head"><h2 id="toolTitle">Tool</h2><button class="close" data-close="toolModal">×</button></div><div id="toolBody"></div></div></div>
+
+<div class="modal-backdrop" id="authModal">
+<div class="modal">
+<div class="modal-head"><h2 id="authTitle">Create your free account</h2><button class="close" data-close="authModal">×</button></div>
+<form id="authForm">
+<div class="field" id="nameField"><label for="authName">Full name</label><input id="authName" autocomplete="name" placeholder="Your name"></div>
+<div class="field"><label for="authEmail">Email</label><input id="authEmail" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+<div class="field"><label for="authPassword">Password</label><input id="authPassword" type="password" required minlength="6" autocomplete="current-password" placeholder="At least 6 characters"></div>
+<div id="signupFields">
+<div class="field"><label for="authGoal">What are you mainly here for?</label><select id="authGoal"><option>All of these</option><option>Productivity</option><option>Study</option><option>Creativity</option><option>Relaxation</option></select></div>
+</div>
+<div id="authMessage"></div>
+<button class="btn btn-primary" style="width:100%" id="authSubmit">Create Free Account</button>
+</form>
+<div class="auth-switch"><span id="authSwitchText">Already have an account?</span> <button type="button" id="authSwitchBtn">Sign in</button></div>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+
+const $=s=>document.querySelector(s);
+const app=$("#app");
+let authMode="signup";
+const STORE_USER="chillax-user";
+const STORE_SESSION="chillax-session";
+const STORE_THEME="chillax-theme";
+
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+function currentUser(){try{return JSON.parse(localStorage.getItem(STORE_USER)||"null")}catch{return null}}
+function signedIn(){return localStorage.getItem(STORE_SESSION)==="1"&&!!currentUser()}
+function initials(name){return (name||"C").trim().split(/\s+/).slice(0,2).map(x=>x[0]).join("").toUpperCase()}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(window._toast);window._toast=setTimeout(()=>t.classList.remove("show"),3200)}
+function closeModal(id){$("#"+id).classList.remove("show")}
+function openModal(id){$("#"+id).classList.add("show")}
+
+function applyTheme(){
+  const light=localStorage.getItem(STORE_THEME)==="light";
+  document.documentElement.classList.toggle("light",light);
+  $("#themeBtn").textContent=light?"🌙":"☀️";
+}
+applyTheme();
+$("#themeBtn").onclick=()=>{localStorage.setItem(STORE_THEME,document.documentElement.classList.contains("light")?"dark":"light");applyTheme()};
+$("#menuBtn").onclick=()=>$("#navLinks").classList.toggle("open");
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>$("#navLinks").classList.remove("open")));
+document.querySelectorAll("footer a").forEach(a=>a.addEventListener("click",()=>$("#navLinks").classList.remove("open")));
+$("#year").textContent=new Date().getFullYear();
+
+function openAuth(mode="signup"){
+  authMode=mode; $("#authMessage").textContent=""; $("#authForm").reset(); renderAuth(); openModal("authModal");
+}
+function renderAuth(){
+  const signup=authMode==="signup";
+  $("#authTitle").textContent=signup?"Create your free account":"Welcome back";
+  $("#nameField").classList.toggle("hidden",!signup);
+  $("#signupFields").classList.toggle("hidden",!signup);
+  $("#authPassword").setAttribute("autocomplete",signup?"new-password":"current-password");
+  $("#authSubmit").textContent=signup?"Create Free Account":"Sign In";
+  $("#authSwitchText").textContent=signup?"Already have an account?":"New to Chillax?";
+  $("#authSwitchBtn").textContent=signup?"Sign in":"Create account";
+}
+$("#navSignIn").onclick=()=>openAuth("signin");
+$("#navGetStarted").onclick=()=>openAuth("signup");
+$("#authSwitchBtn").onclick=()=>{authMode=authMode==="signup"?"signin":"signup";renderAuth();$("#authMessage").textContent=""};
+
+$("#authForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const email=$("#authEmail").value.trim().toLowerCase();
+  const password=$("#authPassword").value;
+  const name=$("#authName").value.trim();
+  const msg=$("#authMessage");
+  if(authMode==="signup"){
+    if(password.length<6){msg.innerHTML='<div class="error">Password must contain at least 6 characters.</div>';return}
+    if(localStorage.getItem(STORE_USER)){msg.innerHTML='<div class="error">An account already exists in this browser. Please sign in instead.</div>';return}
+    const user={name:name||"Chillax user",email,password,goal:$("#authGoal").value,createdAt:new Date().toISOString(),toolUses:0};
+    localStorage.setItem(STORE_USER,JSON.stringify(user));localStorage.setItem(STORE_SESSION,"1");
+    closeModal("authModal");toast("Account created. Welcome to Chillax!");renderRoute();
+  }else{
+    const user=currentUser();
+    if(!user){msg.innerHTML='<div class="error">No local account was found. Create an account first.</div>';return}
+    if(user.email!==email||user.password!==password){msg.innerHTML='<div class="error">Email or password is incorrect.</div>';return}
+    localStorage.setItem(STORE_SESSION,"1");closeModal("authModal");toast("You are signed in.");renderRoute();
+  }
+});
+
+document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>closeModal(b.dataset.close));
+document.querySelectorAll(".modal-backdrop").forEach(x=>x.addEventListener("click",e=>{if(e.target===x)x.classList.remove("show")}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal("toolModal");closeModal("authModal")}});
+
+const tools={
+"life-weather":{title:"🌦️ Life Weather",html:`<p class="preview-small">A simple check-in — not a diagnosis or medical assessment.</p><div class="field"><label>Energy</label><select id="lwEnergy"><option>High</option><option selected>Medium</option><option>Low</option></select></div><div class="field"><label>Mood</label><select id="lwMood"><option>Great</option><option selected>Okay</option><option>Tired</option><option>Low</option></select></div><button class="btn btn-primary" onclick="runLifeWeather()">Check my weather</button><div id="toolResult"></div>`},
+"next-move":{title:"🧭 What Should I Do Now?",html:`<div class="field"><label>How much time do you have?</label><select id="nmTime"><option>10 minutes</option><option selected>30 minutes</option><option>1 hour</option><option>2+ hours</option></select></div><div class="field"><label>Energy level</label><select id="nmEnergy"><option>High</option><option selected>Medium</option><option>Low</option></select></div><div class="field"><label>What do you need to work on?</label><input id="nmTask" placeholder="e.g. study, email, clean desk"></div><button class="btn btn-primary" onclick="runNextMove()">Find my next move</button><div id="toolResult"></div>`},
+"brain-dump":{title:"🧠 Brain Dump → Life Plan",html:`<p class="preview-small">Turn your thoughts into a simple local plan. Your text stays in this browser.</p><div class="field"><label>Brain dump</label><textarea id="bdText" placeholder="Write everything on your mind…"></textarea></div><button class="btn btn-primary" onclick="runBrainDump()">Make it manageable</button><div id="toolResult"></div>`},
+"clarity":{title:"🌀 Overthinking → Clarity",html:`<div class="field"><label>What are you overthinking?</label><textarea id="clText" placeholder="Describe the situation…"></textarea></div><button class="btn btn-primary" onclick="runClarity()">Find clarity</button><div id="toolResult"></div>`},
+"challenge":{title:"🎯 Boring Task → Challenge",html:`<div class="field"><label>Task</label><input id="chTask" placeholder="e.g. clean my room"></div><div class="field"><label>Available time</label><select id="chTime"><option>10 minutes</option><option>20 minutes</option><option selected>30 minutes</option><option>60 minutes</select></div><button class="btn btn-primary" onclick="runChallenge()">Turn it into a challenge</button><div id="toolResult"></div>`},
+"night-reset":{title:"🌙 Night Reset",html:`<div class="field"><label>What is still on your mind?</label><textarea id="nrText" placeholder="Tasks, worries, unfinished thoughts…"></textarea></div><button class="btn btn-primary" onclick="runNightReset()">Reset my evening</button><div id="toolResult"></div>`},
+"journal":{title:"📓 Daily Journal",html:`<p class="preview-small">Write a quick private journal entry. It is saved only in this browser.</p><div class="field"><label>How are you feeling?</label><select id="jrMood"><option>Great</option><option>Good</option><option>Okay</option><option>Tired</option><option>Low</option></select></div><div class="field"><label>Journal entry</label><textarea id="jrText" placeholder="What happened today? What is on your mind?"></textarea></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-primary" onclick="saveJournal()">Save entry</button><button class="btn btn-secondary" onclick="loadJournal()">Load saved entry</button></div><div id="toolResult"></div>`},
+"habit-tracker":{title:"✅ Habit Tracker",html:`<p class="preview-small">Track three small habits for today. Your checkmarks are saved locally.</p><div id="habitList"></div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn btn-primary" onclick="saveHabits()">Save today's progress</button><button class="btn btn-secondary" onclick="resetHabits()">Reset</button></div><div id="toolResult"></div>`},
+"day-planner":{title:"🗓️ Day Planner",html:`<p class="preview-small">Build a realistic day around your available time and top priorities.</p><div class="field"><label>Available hours</label><select id="dpHours"><option>2</option><option selected>4</option><option>6</option><option>8</option><option>10</option></select></div><div class="field"><label>Top priorities (one per line)</label><textarea id="dpTasks" placeholder="Finish assignment&#10;Reply to emails&#10;Workout"></textarea></div><button class="btn btn-primary" onclick="makeDayPlan()">Build my day</button><div id="toolResult"></div>`},
+"priority-matrix":{title:"🎯 Priority Matrix",html:`<p class="preview-small">Sort your tasks into Do Now, Schedule, Delegate and Drop so you know where to start.</p><div class="field"><label>Tasks (one per line)</label><textarea id="pmTasks" placeholder="Submit assignment&#10;Clean desk&#10;Call friend&#10;Buy groceries"></textarea></div><button class="btn btn-primary" onclick="makePriorityMatrix()">Organize tasks</button><div id="toolResult"></div>`},
+"breathing-reset":{title:"🌬️ Breathing Reset",html:`<p class="preview-small">A simple paced breathing exercise. Follow the on-screen cue and stop whenever you want.</p><div id="breathPhase" class="result" style="text-align:center;font-size:22px;font-weight:700">Ready</div><div class="meter" style="margin-top:14px"><div class="bar"><i id="breathBar" style="width:0%"></i></div></div><div style="display:flex;gap:8px;justify-content:center;margin-top:14px"><button class="btn btn-primary" onclick="startBreathing()">Start 60-second reset</button><button class="btn btn-secondary" onclick="stopBreathing()">Stop</button></div>`},
+"gratitude":{title:"🌿 3 Good Things",html:`<p class="preview-small">Capture three good things from today. Your entry can be saved locally.</p><div class="field"><label>Good thing #1</label><input id="gt1" placeholder="Something small counts"></div><div class="field"><label>Good thing #2</label><input id="gt2" placeholder="A person, moment or win"></div><div class="field"><label>Good thing #3</label><input id="gt3" placeholder="Anything you appreciated"></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-primary" onclick="saveGratitude()">Save reflection</button><button class="btn btn-secondary" onclick="loadGratitude()">Load saved</button></div><div id="toolResult"></div>`},
+"rewriter":{title:"✍️ AI Rewriter",html:`<p class="preview-small">Browser demo: this version works locally without an API key. A secure AI backend can be connected later for true AI generation.</p><div class="field"><label>Text</label><textarea id="rwText" placeholder="Paste text to rewrite…"></textarea></div><div class="field"><label>Style</label><select id="rwStyle"><option>Clear</option><option>Professional</option><option>Friendly</option><option>Concise</option></select></div><button class="btn btn-primary" onclick="runRewriter()">Rewrite</button><div id="toolResult"></div>`},
+"summarizer":{title:"📝 AI Summarizer",html:`<p class="preview-small">Works locally by selecting the most useful sentences. No text is uploaded.</p><div class="field"><label>Text</label><textarea id="sumText" placeholder="Paste notes or an article…"></textarea></div><button class="btn btn-primary" onclick="runSummarizer()">Summarize</button><div id="toolResult"></div>`},
+"study":{title:"🎓 AI Study Helper",html:`<div class="field"><label>Topic</label><input id="stTopic" placeholder="e.g. Photosynthesis"></div><div class="field"><label>What do you need?</label><select id="stNeed"><option>Simple explanation</option><option>Key points</option><option>Practice questions</option></select></div><button class="btn btn-primary" onclick="runStudy()">Build study help</button><div id="toolResult"></div>`},
+"ideas":{title:"💡 AI Idea Generator",html:`<div class="field"><label>What do you need ideas for?</label><input id="idTopic" placeholder="e.g. YouTube channel names"></div><div class="field"><label>How many?</label><select id="idCount"><option>5</option><option selected>10</option><option>15</option></select></div><button class="btn btn-primary" onclick="runIdeas()">Generate ideas</button><div id="toolResult"></div>`},
+"word-counter":{title:"🔢 Word Counter",html:`<div class="field"><label>Paste text</label><textarea id="wcText" oninput="countWords()" placeholder="Start typing…"></textarea></div><div class="result" id="wcResult">Words: 0\nCharacters: 0\nReading time: 0 min</div>`},
+"stylish-text":{title:"✨ Stylish Text Generator",html:`<p class="preview-small">Turn normal text into stylish Unicode text for Instagram, TikTok, WhatsApp, bios, captions, usernames and more. Everything is generated in your browser.</p><div class="field"><label for="styText">Enter your text</label><textarea id="styText" oninput="generateStylish()" placeholder="Type something stylish…"></textarea></div><div class="field"><label for="styStyle">Choose a style</label><select id="styStyle" onchange="generateStylish()"><option value="bold">Bold</option><option value="italic">Italic</option><option value="bolditalic">Bold Italic</option><option value="script">Script</option><option value="boldscript">Bold Script</option><option value="fraktur">Fraktur</option><option value="boldfraktur">Bold Fraktur</option><option value="double">Double Struck</option><option value="mono">Monospace</option><option value="sans">Sans Serif</option><option value="sansbold">Sans Bold</option><option value="sansitalic">Sans Italic</option><option value="sansbolditalic">Sans Bold Italic</option><option value="circled">Circled</option><option value="squared">Squared</option><option value="fullwidth">Fullwidth</option><option value="smallcaps">Small Caps</option><option value="upsidedown">Upside Down</option><option value="wide">Wide Spacing</option></select></div><div id="stylishResult" class="result">Your stylish text will appear here.</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn btn-primary" onclick="copyStylish()">Copy Text</button><button class="btn btn-secondary" onclick="generateAllStylish()">Show All Styles</button></div><div id="stylishAll"></div>`},"case":{title:"Aa Case Converter",html:`<div class="field"><label>Text</label><textarea id="caseText" placeholder="Type or paste text…"></textarea></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-secondary" onclick="convertCase('upper')">UPPERCASE</button><button class="btn btn-secondary" onclick="convertCase('lower')">lowercase</button><button class="btn btn-secondary" onclick="convertCase('title')">Title Case</button></div>`},
+"qr":{title:"🔳 QR Generator",html:`<p class="preview-small">This creates a QR image through a public QR endpoint. If the endpoint is unavailable, the tool will show an error instead of a broken image.</p><div class="field"><label>URL or text</label><input id="qrText" placeholder="https://example.com"></div><button class="btn btn-primary" onclick="generateQR()">Generate QR</button><div id="toolResult"></div>`}
+};
+
+function recordUse(id,title){
+ const u=currentUser();if(!u)return;
+ u.toolUses=(u.toolUses||0)+1;
+ u.toolHistory=Array.isArray(u.toolHistory)?u.toolHistory:[];
+ u.toolHistory.push({id,title,timeLabel:new Date().toLocaleString()});
+ if(u.toolHistory.length>20)u.toolHistory=u.toolHistory.slice(-20);
+ localStorage.setItem(STORE_USER,JSON.stringify(u));
+}
+function openTool(id){
+  const t=tools[id];if(!t){toast("This tool is not available.");return}
+  $("#toolTitle").textContent=t.title;$("#toolBody").innerHTML=t.html;openModal("toolModal");recordUse(id,t.title);if(id==="habit-tracker")renderHabits();
+}
+function result(text){$("#toolResult").innerHTML='<div class="result">'+esc(text)+'</div>'}
+function runLifeWeather(){const e=$("#lwEnergy").value,m=$("#lwMood").value;const advice=e==="High"?"Your weather looks clear enough for one meaningful push. Pick a priority and protect some downtime afterward.":e==="Low"?"Cloudy day: lower the bar. Choose one necessary task and keep the rest optional.":"Partly calm: aim for one focused block followed by a real break.";result("Mood: "+m+"\nEnergy: "+e+"\n\n"+advice)}
+function runNextMove(){const time=$("#nmTime").value,e=$("#nmEnergy").value,t=$("#nmTask").value.trim()||"your task";let move=e==="Low"?"Make the first step tiny: spend 5 minutes preparing "+t+".":e==="High"?"Use your energy for a focused sprint on "+t+" and stop at the end of your chosen time.":"Set a short timer and work only on the next visible step of "+t+".";result("You have "+time+".\n\nNext move:\n"+move)}
+function runBrainDump(){const text=$("#bdText").value.trim();if(!text)return result("Add a few thoughts first.");const parts=text.split(/[.!?\n]+/).map(x=>x.trim()).filter(Boolean).slice(0,7);result("QUICK PLAN\n\n1. Pick the most important item.\n2. Turn it into the smallest next action.\n3. Park the remaining items for later.\n\nYour notes:\n• "+parts.join("\n• "))}
+function runClarity(){const text=$("#clText").value.trim();if(!text)return result("Describe the situation first.");result("CLARITY CHECK\n\nFacts: What do you actually know?\n\nWorries: What are you predicting or assuming?\n\nControl: What is one action you can take today?\n\nReminder: You don't need to solve the entire situation at once.")}
+function runChallenge(){const t=$("#chTask").value.trim()||"your task",time=$("#chTime").value;result("THE "+time.toUpperCase()+" CHALLENGE\n\nGoal: "+t+"\n\nRules:\n• Start immediately.\n• Ignore perfection.\n• Keep only the task in front of you.\n• Stop when the timer ends and mark the win.")}
+function runNightReset(){result("NIGHT RESET\n\n1. Write down anything unfinished.\n2. Choose ONE thing that truly needs tomorrow's attention.\n3. Decide the first tiny step.\n4. Let the rest wait.\n\nYou do not need to finish tomorrow tonight.")}
+function runRewriter(){const t=$("#rwText").value.trim();if(!t)return result("Paste some text first.");const style=$("#rwStyle").value;let out=t.replace(/\s+/g," ").trim();if(style==="Concise")out=out.split(/[.!?]+/).filter(Boolean).slice(0,2).join(". ")+".";if(style==="Professional")out="Please note: "+out.charAt(0).toUpperCase()+out.slice(1);if(style==="Friendly")out="Here’s a smoother version: "+out;result(out+"\n\nLocal demo mode — no text was sent to a server.")}
+function runSummarizer(){const t=$("#sumText").value.trim();if(!t)return result("Paste text first.");const sentences=t.match(/[^.!?]+[.!?]+/g)||[t];result(sentences.slice(0,3).join(" ").trim()+"\n\nLocal summary mode — no text was sent to a server.")}
+function runStudy(){const t=$("#stTopic").value.trim()||"your topic",need=$("#stNeed").value;const content=need==="Practice questions"?"1. What is "+t+"?\n2. What are its key principles?\n3. Give a real-world example.\n4. What common mistake should you avoid?\n5. Explain it in your own words.":need==="Key points"?"KEY POINTS FOR "+t.toUpperCase()+"\n• Start with the purpose.\n• Learn the main components.\n• Connect each component to an example.\n• Test yourself without notes.":"SIMPLE EXPLANATION\n\nBreak "+t+" into: what it is, why it matters, how it works, and one simple example.\n\nLocal study-helper mode — use your own notes or a trusted source to verify details.";result(content)}
+function runIdeas(){const t=$("#idTopic").value.trim()||"your project",n=Number($("#idCount").value),prefixes=["Bright","Simple","Nova","Flow","Fresh","Spark","Calm","Next","Clear","Mint","Peak","Vibe","Swift","Nest","Orbit"];const arr=[];for(let i=0;i<n;i++)arr.push((prefixes[i%prefixes.length])+" "+t.split(" ").slice(0,2).join(" "));result(arr.map((x,i)=>(i+1)+". "+x).join("\n"))}
+
+const stylishMaps={
+ bold:[0x1D400,0x1D41A], italic:[0x1D434,0x1D44E], bolditalic:[0x1D468,0x1D482],
+ script:[0x1D49C,0x1D4B6], boldscript:[0x1D4D0,0x1D4EA], fraktur:[0x1D504,0x1D51E],
+ boldfraktur:[0x1D56C,0x1D586], double:[0x1D538,0x1D552], mono:[0x1D670,0x1D68A],
+ sans:[0x1D5A0,0x1D5BA], sansbold:[0x1D5D4,0x1D5EE], sansitalic:[0x1D608,0x1D622],
+ sansbolditalic:[0x1D63C,0x1D656]
+};
+const specialLetterMap={
+ script:{C:"ℭ",H:"ℋ",I:"ℐ",R:"ℛ",Z:"ℤ"},
+ fraktur:{C:"ℭ",H:"ℌ",I:"ℑ",R:"ℜ",Z:"ℨ"},
+ double:{C:"ℂ",H:"ℍ",N:"ℕ",P:"ℙ",Q:"ℚ",R:"ℝ",Z:"ℤ"},
+ bold:{C:"ℂ",H:"ℍ",I:"ℐ",R:"ℝ",Z:"ℤ"}
+};
+const smallCaps={a:"ᴀ",b:"ʙ",c:"ᴄ",d:"ᴅ",e:"ᴇ",f:"ꜰ",g:"ɢ",h:"ʜ",i:"ɪ",j:"ᴊ",k:"ᴋ",l:"ʟ",m:"ᴍ",n:"ɴ",o:"ᴏ",p:"ᴘ",q:"ǫ",r:"ʀ",s:"s",t:"ᴛ",u:"ᴜ",v:"ᴠ",w:"ᴡ",x:"x",y:"ʏ",z:"ᴢ"};
+const upsideDown={a:"ɐ",b:"q",c:"ɔ",d:"p",e:"ǝ",f:"ɟ",g:"ƃ",h:"ɥ",i:"ᴉ",j:"ɾ",k:"ʞ",l:"ʃ",m:"ɯ",n:"u",o:"o",p:"d",q:"b",r:"ɹ",s:"s",t:"ʇ",u:"n",v:"ʌ",w:"ʍ",x:"x",y:"ʎ",z:"z","0":"0","1":"Ɩ","2":"ᄅ","3":"Ɛ","4":"ㄣ","5":"ϛ","6":"9","7":"ㄥ","8":"8","9":"6",".":"˙",",":"'", "?":"¿","!":"¡"};
+const fullwidthOffset=0xFEE0;
+
+function unicodeStyle(text,type){
+ if(!text)return "";
+ if(type==="smallcaps")return [...text].map(c=>smallCaps[c.toLowerCase()]||c).join("");
+ if(type==="fullwidth")return [...text].map(c=>{const n=c.charCodeAt(0);return n>=33&&n<=126?String.fromCharCode(n+fullwidthOffset):c===" "? "　":c}).join("");
+ if(type==="wide")return [...text].join(" ");
+ if(type==="circled")return [...text].map(c=>{const n=c.toUpperCase().charCodeAt(0);if(n>=65&&n<=90)return String.fromCodePoint(0x24B6+n-65);if(n>=48&&n<=57)return String.fromCodePoint(0x24EA+(n-48));return c}).join("");
+ if(type==="squared")return [...text].map(c=>{const n=c.toUpperCase().charCodeAt(0);if(n>=65&&n<=90)return String.fromCodePoint(0x1F130+n-65);return c}).join("");
+ if(type==="upsidedown")return [...text].reverse().map(c=>upsideDown[c.toLowerCase()]||c).join("");
+ const map=stylishMaps[type];
+ if(!map)return text;
+ const [upperStart,lowerStart]=map;
+ return [...text].map(c=>{
+   const n=c.charCodeAt(0);
+   if(n>=65&&n<=90)return String.fromCodePoint(upperStart+n-65);
+   if(n>=97&&n<=122)return String.fromCodePoint(lowerStart+n-97);
+   return c;
+ }).join("");
+}
+function generateStylish(){
+ const text=$("#styText")?.value||"";
+ const type=$("#styStyle")?.value||"bold";
+ const out=unicodeStyle(text,type);
+ const box=$("#stylishResult");
+ if(box)box.textContent=out||"Your stylish text will appear here.";
+ if($("#stylishAll"))$("#stylishAll").innerHTML="";
+}
+function generateAllStylish(){
+ const text=$("#styText")?.value||"";
+ if(!text){$("#stylishAll").innerHTML='<div class="error" style="margin-top:12px">Enter some text first.</div>';return}
+ const styles=[["Bold","bold"],["Italic","italic"],["Bold Italic","bolditalic"],["Script","script"],["Bold Script","boldscript"],["Fraktur","fraktur"],["Bold Fraktur","boldfraktur"],["Double Struck","double"],["Monospace","mono"],["Sans Serif","sans"],["Sans Bold","sansbold"],["Sans Italic","sansitalic"],["Sans Bold Italic","sansbolditalic"],["Circled","circled"],["Squared","squared"],["Fullwidth","fullwidth"],["Small Caps","smallcaps"],["Upside Down","upsidedown"],["Wide","wide"]];
+ $("#stylishAll").innerHTML='<div style="display:grid;gap:9px;margin-top:15px">'+styles.map(([name,type])=>`<div class="result" style="display:flex;justify-content:space-between;gap:10px;align-items:center"><span><b style="display:block;font-size:11px;color:var(--muted);margin-bottom:4px">${name}</b>${esc(unicodeStyle(text,type))}</span><button class="btn btn-secondary" style="padding:7px 10px;font-size:12px" onclick="copyText(${JSON.stringify(unicodeStyle(text,type))})">Copy</button></div>`).join("")+'</div>';
+}
+function copyText(text){
+ if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(text).then(()=>toast("Text copied!")).catch(()=>fallbackCopy(text));
+ else fallbackCopy(text);
+}
+function fallbackCopy(text){
+ const ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();
+ try{document.execCommand("copy");toast("Text copied!")}catch{toast("Select the text and copy it manually.")}ta.remove();
+}
+function copyStylish(){copyText($("#stylishResult")?.textContent||"")}
+
+
+function saveJournal(){const mood=$("#jrMood").value,text=$("#jrText").value.trim();if(!text){result("Write something first.");return}localStorage.setItem("chillax-journal",JSON.stringify({date:new Date().toLocaleDateString(),mood,text}));result("Journal saved locally for "+new Date().toLocaleDateString()+".")}
+function loadJournal(){try{const x=JSON.parse(localStorage.getItem("chillax-journal")||"null");if(!x){result("No saved journal entry yet.");return}$("#jrMood").value=x.mood;$("#jrText").value=x.text;result("Loaded your saved entry from "+x.date+".")}catch{result("Could not load the saved entry.")}}
+function habitState(){try{return JSON.parse(localStorage.getItem("chillax-habits")||"{}")}catch{return {}}}
+function renderHabits(){const box=$("#habitList");if(!box)return;const s=habitState(),names=["Drink enough water","Move for 20 minutes","Read or learn for 15 minutes"];box.innerHTML=names.map((n,i)=>`<label class="check-row"><input type="checkbox" id="habit${i}" ${s[i]?"checked":""}><span>${n}</span></label>`).join("")}
+function saveHabits(){const s={0:$("#habit0")?.checked||false,1:$("#habit1")?.checked||false,2:$("#habit2")?.checked||false};localStorage.setItem("chillax-habits",JSON.stringify(s));const done=Object.values(s).filter(Boolean).length;result(done+"/3 habits completed today.")}
+function resetHabits(){localStorage.removeItem("chillax-habits");renderHabits();result("Today's habit checkmarks were reset.")}
+function makeDayPlan(){const hours=Number($("#dpHours").value),tasks=$("#dpTasks").value.split(/\n+/).map(x=>x.trim()).filter(Boolean).slice(0,8);if(!tasks.length){result("Add at least one priority.");return}const slots=Math.max(1,Math.floor((hours*60)/Math.max(tasks.length,1)));const plan=tasks.map((t,i)=>`${i+1}. ${t} — ${Math.min(90,Math.max(20,slots))} min focus block`).join("\n");result("YOUR DAY PLAN\n\n"+plan+"\n\nTip: leave a little space between blocks for breaks and unexpected tasks.")}
+function makePriorityMatrix(){const tasks=$("#pmTasks").value.split(/\n+/).map(x=>x.trim()).filter(Boolean).slice(0,20);if(!tasks.length){result("Add some tasks first.");return}const groups=[[],[],[],[]];tasks.forEach((t,i)=>groups[i%4].push(t));result("DO NOW\n• "+(groups[0].join("\n• ")||"Nothing yet")+"\n\nSCHEDULE\n• "+(groups[1].join("\n• ")||"Nothing yet")+"\n\nDELEGATE\n• "+(groups[2].join("\n• ")||"Nothing yet")+"\n\nDROP / PARK\n• "+(groups[3].join("\n• ")||"Nothing yet")+"\n\nTip: review the categories and move each task based on urgency and importance.")}
+let breathTimer=null,breathStart=0;
+function startBreathing(){stopBreathing();breathStart=Date.now();const phase=$("#breathPhase"),bar=$("#breathBar");breathTimer=setInterval(()=>{const elapsed=(Date.now()-breathStart)/1000;if(elapsed>=60){stopBreathing();phase.textContent="Done — take one slow breath.";bar.style.width="100%";return}const cycle=12,at=elapsed%cycle;if(at<4){phase.textContent="Breathe in";bar.style.width=((at/4)*33)+"%"}else if(at<8){phase.textContent="Hold gently";bar.style.width=(33+((at-4)/4)*34)+"%"}else{phase.textContent="Breathe out";bar.style.width=(67+((at-8)/4)*33)+"%"}} ,100)}
+function stopBreathing(){if(breathTimer){clearInterval(breathTimer);breathTimer=null}}
+function saveGratitude(){const vals=[$("#gt1").value.trim(),$("#gt2").value.trim(),$("#gt3").value.trim()];if(vals.some(v=>!v)){result("Fill in all three good things first.");return}localStorage.setItem("chillax-gratitude",JSON.stringify({date:new Date().toLocaleDateString(),items:vals}));result("Reflection saved locally. Small wins still count.")}
+function loadGratitude(){try{const x=JSON.parse(localStorage.getItem("chillax-gratitude")||"null");if(!x){result("No saved reflection yet.");return}$("#gt1").value=x.items[0]||"";$("#gt2").value=x.items[1]||"";$("#gt3").value=x.items[2]||"";result("Loaded your saved reflection from "+x.date+".")}catch{result("Could not load the saved reflection.")}}
+function countWords(){const t=$("#wcText").value,words=t.trim()?t.trim().split(/\s+/).length:0,chars=t.length,mins=words?Math.max(1,Math.ceil(words/200)):0;$("#wcResult").textContent="Words: "+words+"\nCharacters: "+chars+"\nReading time: "+mins+" min"}
+function convertCase(type){const el=$("#caseText"),t=el.value;if(type==="upper")el.value=t.toUpperCase();if(type==="lower")el.value=t.toLowerCase();if(type==="title")el.value=t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())}
+function generateQR(){const t=$("#qrText").value.trim();if(!t)return result("Enter a URL or text first.");const box=$("#toolResult");box.innerHTML='<div class="result">Generating QR…</div>';const img=new Image();img.width=240;img.height=240;img.alt="Generated QR code";img.style.cssText="display:block;width:240px;height:240px;background:white;padding:10px;border-radius:12px;margin-top:14px";img.onload=()=>{box.innerHTML="";box.appendChild(img)};img.onerror=()=>{box.innerHTML='<div class="error">The QR service could not be reached. Check your connection and try again.</div>'};img.src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data="+encodeURIComponent(t)}
+
+function moodButtons(){
+ return `<div class="moods"><button class="mood" onclick="selectMood(this,'Great')">😄<small>Great</small></button><button class="mood" onclick="selectMood(this,'Good')">🙂<small>Good</small></button><button class="mood" onclick="selectMood(this,'Okay')">😐<small>Okay</small></button><button class="mood" onclick="selectMood(this,'Tired')">😴<small>Tired</small></button><button class="mood" onclick="selectMood(this,'Low')">😫<small>Low</small></button></div>`
+}
+function selectMood(btn,mood){document.querySelectorAll(".mood").forEach(x=>x.style.borderColor="");btn.style.borderColor="var(--accent)";const map={Great:[85,"You're doing well — protect your momentum.","Keep one meaningful task moving, then take a proper break."],Good:[72,"A steady day.","Choose one useful task and make the first step tiny."],Okay:[55,"Let's keep it simple.","Pick something you can finish in 20–30 minutes."],Tired:[35,"Low battery mode.","Do one necessary task, then give yourself a real reset."],Low:[25,"Be gentle with yourself.","Reduce the pressure. Start with one small thing you can control."]};const d=map[mood];$("#energyVal").textContent=d[0]+"%";$("#energyBar").style.width=d[0]+"%";$("#suggestionTitle").textContent=d[1];$("#suggestionText").textContent=d[2]}
+
+function homeHTML(){
+ return `<section class="hero" id="home"><div class="container hero-grid"><div><div class="eyebrow"><span class="dot"></span> Free tools for everyday life</div><h1>Smart tools.<br><em>Zero stress.</em></h1><p class="hero-copy">Chillax brings useful AI and everyday tools into one calm, simple workspace. Write better, study smarter, plan your day, create ideas and take a moment to reset.</p><div class="hero-buttons"><a class="btn btn-primary" href="/ai-tools/">Explore tools →</a><button class="btn btn-secondary" onclick="openAuth('signup')">Create free account</button></div><div class="trust-row"><span>✓ Free everyday tools</span><span>✓ Browser-based utilities</span><span>✓ Simple by design</span></div></div>
+<div class="hero-card"><div class="dashboard-preview"><div class="preview-top"><div><div class="preview-title">Your Chillax</div><div class="preview-small">A small check-in for today</div></div><span class="pill">Personal</span></div><div class="mood-row"><h3>How are you feeling?</h3>${moodButtons()}<div class="meter"><div class="meter-line"><span>Energy</span><b id="energyVal">72%</b></div><div class="bar"><i id="energyBar" style="width:72%"></i></div></div><div class="meter"><div class="meter-line"><span>Focus</span><b>61%</b></div><div class="bar"><i style="width:61%"></i></div></div><div class="meter"><div class="meter-line"><span>Motivation</span><b>78%</b></div><div class="bar"><i style="width:78%"></i></div></div></div><div class="suggestion"><b id="suggestionTitle">A calm next move</b><p id="suggestionText">Pick your mood and Chillax can suggest a simple next step.</p></div></div></div></div></section>
+<section id="tools"><div class="container"><div class="section-head"><div><h2>Signature Chillax tools</h2><p>Tools designed around real situations, not just a list of generic AI prompts.</p></div><a class="text-link" href="/ai-tools/">View all tools →</a></div><div class="grid">
+${toolCard("🌦️","Life Weather","Turn a quick mood and energy check-in into a simple picture of your day.","life-weather","Chillax")}
+${toolCard("🧭","What Should I Do Now?","Tell Chillax how much time and energy you have and get a practical next move.","next-move","Chillax")}
+${toolCard("🧠","Brain Dump → Life Plan","Empty your head into one box and turn the mess into manageable steps.","brain-dump","Chillax")}
+${toolCard("🌀","Overthinking → Clarity","Separate facts, worries and actions so the next decision feels lighter.","clarity","Chillax")}
+${toolCard("🎯","Boring Task → Challenge","Turn a task you keep avoiding into a small challenge with a clear finish line.","challenge","Chillax")}
+${toolCard("🌙","Night Reset","Wrap up the day, clear unfinished thoughts and set one gentle priority for tomorrow.","night-reset","Chillax")}
+</div></div></section>
+<section id="personal-tools"><div class="container"><div class="section-head"><div><h2>Personal</h2><p>Small tools for reflection, habits and keeping your day feeling manageable.</p></div></div><div class="grid">
+${toolCard("📓","Daily Journal","Write a private daily entry and save it in your browser.","journal","Personal")}
+${toolCard("✅","Habit Tracker","Check off three daily habits and keep your progress locally.","habit-tracker","Personal")}
+</div></div></section>
+<section id="planning-tools"><div class="container"><div class="section-head"><div><h2>Planning</h2><p>Turn a busy list into a clear plan and decide what deserves your attention first.</p></div></div><div class="grid">
+${toolCard("🗓️","Day Planner","Build a realistic schedule from your available hours and top priorities.","day-planner","Planning")}
+${toolCard("🎯","Priority Matrix","Sort tasks into do now, schedule, delegate or drop.","priority-matrix","Planning")}
+</div></div></section>
+<section id="chill-tools"><div class="container"><div class="section-head"><div><h2>Chill</h2><p>Simple browser-based resets for a slower, lighter moment.</p></div></div><div class="grid">
+${toolCard("🌬️","Breathing Reset","Follow a gentle paced breathing exercise for 60 seconds.","breathing-reset","Chill")}
+${toolCard("🌿","3 Good Things","Capture three positive moments from your day and save the reflection locally.","gratitude","Chill")}
+</div></div></section>
+${allToolsHTML()}${freeToolsHTML()}${categoriesHTML()}${learnHTML()}
+<section id="about"><div class="container"><div class="cta"><h2>Make your next step easier.</h2><p>Chillax is built around one simple idea: useful tools should reduce friction, not add to it.</p><div class="hero-buttons" style="justify-content:center"><a class="btn btn-primary" href="/ai-tools/">Explore Chillax</a><button class="btn btn-secondary" onclick="openAuth('signup')">Create free account</button></div></div></div></section>`;
+}
+function toolCard(icon,title,desc,id,pill){return `<article class="card tool-card" data-name="${esc(title)}"><div class="tool-icon">${icon}</div><h3>${title}</h3><p>${desc}</p><div class="card-footer"><span class="pill">${pill}</span><button class="open-tool" onclick="openTool('${id}')">Open →</button></div></article>`}
+function allToolsHTML(){return `<section class="tool-section" id="all-tools"><div class="container"><div class="section-head"><div><h2>AI &amp; creative tools</h2><p>Useful helpers for writing, study, creativity, stylish text and everyday productivity.</p></div></div><input class="search" id="toolSearch" type="search" placeholder="Search tools…"><div class="grid" id="aiToolGrid">${toolCard("✍️","AI Rewriter","Rewrite text to make it clearer, smoother or more natural.","rewriter","AI")}${toolCard("📝","AI Summarizer","Turn long notes or pasted text into a concise summary.","summarizer","AI")}${toolCard("🎓","AI Study Helper","Break a topic into explanations, key points and practice questions.","study","AI")}${toolCard("💡","AI Idea Generator","Generate practical ideas for projects, content, names and more.","ideas","AI")}${toolCard("✨","Stylish Text Generator","Create bold, script, gothic, bubble, circled, monospace and many more text styles.","stylish-text","Free")}</div></div></section>`}
+function freeToolsHTML(){return `<section id="free-tools"><div class="container"><div class="section-head"><div><h2>Free utility tools</h2><p>Fast browser-based tools that do useful jobs without an account.</p></div></div><div class="grid">${toolCard("🔢","Word Counter","Count words, characters and approximate reading time instantly.","word-counter","Free")}${toolCard("🔳","QR Generator","Create a QR code from a URL or any short text.","qr","Free")}${toolCard("Aa","Case Converter","Convert text to uppercase, lowercase or title case.","case","Free")}</div></div></section>`}
+function categoriesHTML(){return `<section id="categories"><div class="container"><div class="section-head"><div><h2>Explore by category</h2><p>Find the kind of help you need without digging through a huge tool list.</p></div></div><div class="category-grid"><a class="category" href="/chill-tools/"><span class="category-icon">🧘</span><span><b>Chill</b><small>Reset & relax</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">✍️</span><span><b>Write</b><small>Writing helpers</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">🎓</span><span><b>Study</b><small>Learn smarter</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">💡</span><span><b>Create</b><small>Ideas & inspiration</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">📱</span><span><b>Social</b><small>Captions & bios</small></span></a><a class="category" href="/free-tools/"><span class="category-icon">🛠️</span><span><b>Useful</b><small>Everyday utilities</small></span></a><a class="category" href="/planning-tools/"><span class="category-icon">🎯</span><span><b>Planning</b><small>Get things done</small></span></a><a class="category" href="/personal-tools/"><span class="category-icon">❤️</span><span><b>Personal</b><small>Your Chillax space</small></span></a></div></div></section>`}
+function learnHTML(){return `<section id="learn"><div class="container"><div class="section-head"><div><h2>Latest from the Chillax Blog</h2><p>Practical guides for AI, productivity, study and calmer digital routines.</p></div><a class="text-link" href="/blog/how-to-use-ai-without-overcomplicating-it/">Read a guide →</a></div><div class="grid">
+<a class="card blog-card" href="/blog/how-to-use-ai-without-overcomplicating-it/"><div class="tool-icon">🤖</div><h3>How to Use AI Without Overcomplicating It</h3><p>A practical guide to getting useful results from AI without building a complicated workflow.</p><span class="text-link">Read article →</span></a>
+<a class="card blog-card" href="/blog/simple-study-systems-that-actually-stick/"><div class="tool-icon">📚</div><h3>Simple Study Systems That Actually Stick</h3><p>Small planning, focus and review habits that make it easier to start and keep going.</p><span class="text-link">Read article →</span></a>
+<a class="card blog-card" href="/blog/building-a-calmer-digital-routine/"><div class="tool-icon">🌱</div><h3>Building a Calmer Digital Routine</h3><p>Practical ways to reduce digital clutter and create a routine that feels easier to maintain.</p><span class="text-link">Read article →</span></a>
+</div></div></section>`}
+
+const pages={
+"about-page":{title:"About Us",body:`<p>Chillax is a simple online tools project built around one idea: useful tools should reduce friction, not add to it.</p><p>The website brings together everyday utilities and lightweight AI-style helpers for writing, study, planning, creativity and personal organization.</p><h2>What we aim to provide</h2><ul><li>Simple tools that are easy to understand.</li><li>Browser-based utilities for everyday tasks.</li><li>Clear information about what each tool actually does.</li><li>A calm interface without unnecessary complexity.</li></ul><div class="notice">Some tools on this static website use local browser logic rather than a live AI service. Tool descriptions identify this where relevant.</div>`},
+"contact":{title:"Contact Us",body:`<p>Have a question, suggestion, bug report or partnership idea? We would be happy to hear from you.</p><div class="page-card"><form onsubmit="submitContact(event)"><div class="field"><label>Your name</label><input required id="contactName" placeholder="Your name"></div><div class="field"><label>Email</label><input required type="email" id="contactEmail" placeholder="you@example.com"></div><div class="field"><label>Message</label><textarea required id="contactMessage" placeholder="How can we help?"></textarea></div><button class="btn btn-primary">Prepare Email</button><div id="contactStatus"></div></form></div><p class="preview-small">This static version opens your email application. It does not silently send messages.</p>`},
+"privacy-policy":{title:"Privacy Policy",body:`<p><strong>Last updated: September 15, 2026</strong></p><p>Chillax respects your privacy. This policy explains the information that may be processed when you use this website.</p><h2>Information you provide</h2><p>If you create a local account, your name, email, selected goal and account information are stored in your browser's local storage. This version of Chillax does not send that local account data to a Chillax server.</p><h2>Tool content</h2><p>Most tools on this version operate in your browser. Text entered into the Brain Dump, Clarity, Rewriter, Summarizer, Study and other local tools is processed by the page itself unless a tool specifically states that it uses an external service.</p><h2>QR generator</h2><p>The QR Generator uses an external QR image service. The text or URL is included in the request to that service when you generate a QR code.</p><h2>Cookies and local storage</h2><p>The website may use browser local storage for theme preference, local account state and basic tool usage information. See our Cookie Policy for more details.</p><h2>Third-party services</h2><p>If third-party services, analytics, advertising or payment providers are added in the future, this policy should be updated before those services are enabled.</p><h2>Contact</h2><p>For privacy questions, use the Contact page.</p>`},
+"cookie-policy":{title:"Cookie Policy",body:`<p><strong>Last updated: September 15, 2026</strong></p><p>Chillax currently uses browser storage for basic website functionality. Browser storage is different from a traditional HTTP cookie but serves a similar purpose for remembering preferences and local account state.</p><h2>What we store locally</h2><ul><li>Light/dark theme preference.</li><li>Local account information when you choose to create an account.</li><li>A local sign-in session.</li><li>Basic local tool-use count for the dashboard.</li></ul><h2>Third-party storage</h2><p>The QR Generator may contact an external QR image service when you request a QR code. Your browser may also receive storage or cookies according to that provider's own policies.</p><h2>Managing storage</h2><p>You can clear browser site data through your browser settings. Clearing site data will remove the local Chillax account and preferences stored by this version of the website.</p>`},
+"disclaimer":{title:"Disclaimer",body:`<p><strong>Last updated: September 15, 2026</strong></p><p>The information and tools on Chillax are provided for general informational and productivity purposes.</p><h2>No professional advice</h2><p>Chillax tools are not a substitute for professional medical, legal, financial, educational or other professional advice. In particular, the Life Weather and personal reflection tools are not medical assessments or diagnoses.</p><h2>Tool accuracy</h2><p>Results from lightweight browser tools are generated according to their programmed rules and should be reviewed by the user. Do not rely on automated output where an important decision requires qualified professional judgment.</p><h2>External services</h2><p>Some features may depend on external services. Chillax is not responsible for outages, changes or content controlled by third-party services.</p>`},
+"terms":{title:"Terms & Conditions",body:`<p><strong>Last updated: September 15, 2026</strong></p><p>By using Chillax, you agree to use the website responsibly and lawfully.</p><h2>Use of the website</h2><p>You may use the available tools for lawful personal or business purposes. Do not attempt to disrupt the website, abuse external services, or use the tools for unlawful activity.</p><h2>Accounts</h2><p>The current account feature is a browser-only demonstration. It is not a secure production authentication system. Do not use a password that you use for another important service.</p><h2>Availability</h2><p>We aim to keep the website useful and available, but features may change, be removed or temporarily become unavailable.</p><h2>Intellectual property</h2><p>The Chillax name, design and original website content belong to their respective owner unless otherwise stated. Do not copy substantial portions of the website without permission.</p><h2>Limitation</h2><p>Use the tools at your own discretion. Chillax does not guarantee that every result will be accurate or suitable for a particular purpose.</p>`},
+"blog-ai":{title:"How to Use AI Without Overcomplicating It",body:`<p><strong>Practical guide · Chillax Blog</strong></p><p>AI can be useful without becoming another complicated project to manage. The easiest approach is to start with the task you already need to finish and use AI for one clear part of it.</p><h2>Start with the outcome</h2><p>Before opening a tool, decide what a useful result looks like. Instead of asking for “help with studying,” ask for a short explanation, a set of practice questions or a simple revision plan.</p><h2>Give useful context</h2><p>Good instructions usually include the goal, the audience, the tone and any limits. If you want a short answer, say so. If you want examples, ask for them.</p><h2>Check the result</h2><p>AI output can sound confident while still being incomplete or wrong. Treat it as a starting point, then verify important facts and adapt the result to your situation.</p><div class="notice">Chillax's built-in AI-style tools on this static version use browser logic. They do not connect to a live AI model unless a secure backend is added later.</div><p><a class="btn btn-primary" href="/ai-tools/">Try the tools →</a></p>`},
+"blog-study":{title:"Simple Study Systems That Actually Stick",body:`<p><strong>Practical guide · Chillax Blog</strong></p><p>A study system does not need dozens of apps. A simple loop of planning, focused work, recall and review can be easier to repeat.</p><h2>Choose one target</h2><p>Start each session by writing one specific outcome. For example, instead of “study biology,” choose “explain photosynthesis in my own words.”</p><h2>Use focused blocks</h2><p>Work for a manageable block, remove obvious distractions and take a short break before the next block. The goal is consistent attention, not an exhausting marathon.</p><h2>Test yourself</h2><p>Close your notes and explain the idea from memory. Practice questions and short self-tests reveal what you actually remember.</p><h2>Review later</h2><p>Come back to important material after some time has passed. A short review can be more useful than repeatedly rereading the same page.</p><p><a class="btn btn-primary" href="/ai-tools/">Open Study Helper →</a></p>`},
+"blog-routine":{title:"Building a Calmer Digital Routine",body:`<p><strong>Practical guide · Chillax Blog</strong></p><p>A calmer digital routine is less about quitting technology and more about making your most common actions intentional.</p><h2>Reduce the starting friction</h2><p>Keep the tools you use most visible and remove shortcuts that constantly pull your attention away from what you intended to do.</p><h2>Make a short daily plan</h2><p>Choose one or two important outcomes and a few optional tasks. A plan that leaves room for real life is easier to maintain than a packed schedule.</p><h2>Create a stopping point</h2><p>Before finishing work, write down unfinished tasks and the next step. This makes it easier to stop without carrying the whole list around in your head.</p><h2>Keep your reset simple</h2><p>A short breathing exercise, a journal entry or writing down three good things can give your day a deliberate ending.</p><p><a class="btn btn-primary" href="/chill-tools/">Try a Chill tool →</a></p>`},
+"editorial-policy":{title:"Editorial Policy",body:`<p><strong>Last updated: September 15, 2026</strong></p><p>Chillax aims to publish clear, useful and reader-focused information about online tools, AI, productivity and everyday digital workflows.</p><h2>Our standards</h2><ul><li>Keep explanations understandable and practical.</li><li>Distinguish tool capabilities from claims about future functionality.</li><li>Correct material errors when they are identified.</li><li>Avoid presenting automated output as professional advice.</li><li>Disclose important third-party dependencies when relevant.</li></ul><h2>Corrections</h2><p>If you find an inaccurate statement or broken feature, contact us with the page and the specific issue so it can be reviewed.</p>`}
+};
+
+function pageHTML(key){
+ const p=pages[key];return `<section class="page"><div class="container page-narrow"><a class="back-link" href="/">← Back to home</a><div class="page-card"><h1>${p.title}</h1>${p.body}</div></div></section>`;
+}
+function dashboardHTML(){
+ if(!signedIn())return `<section class="page"><div class="container page-narrow"><div class="page-card dashboard-welcome"><span class="eyebrow"><span class="dot"></span> Your workspace</span><h1>Your dashboard</h1><p>Sign in to see your personal Chillax workspace, quick actions and tool activity.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" onclick="openAuth('signin')">Sign in</button><button class="btn btn-secondary" onclick="openAuth('signup')">Create account</button></div></div></div></section>`;
+ const u=currentUser(), goal=u.goal||"Make everyday tasks easier";
+ const uses=u.toolUses||0;
+ const history=u.toolHistory||[];
+ const recent=history.slice(-5).reverse();
+ const recentHTML=recent.length?recent.map(x=>`<div class="activity-item"><span>${esc(x.title)}</span><small>${esc(x.timeLabel||"Recently")}</small></div>`).join(""):`<div class="empty-state">You haven't opened a tool yet. Pick one below and your activity will appear here.</div>`;
+ return `<section class="page"><div class="container dashboard-wide">
+ <div class="dashboard-hero"><div><span class="eyebrow"><span class="dot"></span> Personal workspace</span><h1>Good to see you, ${esc(u.name.split(" ")[0]||"there")}.</h1><p>${esc(goal)}. Here's a simple place to continue where you left off.</p></div><div class="profile-box compact"><div class="avatar">${esc(initials(u.name))}</div><div><strong>${esc(u.name)}</strong><div class="preview-small">${esc(u.email)}</div><span class="pill">Free account</span></div></div></div>
+ <div class="dashboard-stats">
+ <div class="stat"><strong>${uses}</strong><span>Tools opened</span></div>
+ <div class="stat"><strong>${history.length}</strong><span>Recent activities</span></div>
+ <div class="stat"><strong>Local</strong><span>Privacy mode</span></div>
+ </div>
+ <div class="dashboard-grid">
+  <div class="page-card"><div class="section-head"><div><h2>Quick actions</h2><p>Jump straight into something useful.</p></div></div><div class="quick-grid">
+   <button class="quick-action" onclick="openTool('day-planner')"><span>🗓️</span><b>Plan my day</b><small>Turn priorities into a plan</small></button>
+   <button class="quick-action" onclick="openTool('journal')"><span>📓</span><b>Journal</b><small>Clear your head privately</small></button>
+   <button class="quick-action" onclick="openTool('next-move')"><span>🧭</span><b>Next move</b><small>Decide what to do now</small></button>
+   <button class="quick-action" onclick="openTool('stylish-text')"><span>✨</span><b>Stylish text</b><small>Create copy-ready text</small></button>
+  </div></div>
+  <div class="page-card"><div class="section-head"><div><h2>Recent activity</h2><p>Your latest tool opens on this browser.</p></div></div><div class="activity-list">${recentHTML}</div></div>
+ </div>
+ <div class="page-card"><div class="section-head"><div><h2>Choose your mode</h2><p>Match the tool to what you need right now.</p></div></div><div class="mode-grid">
+  <a href="/personal-tools/" class="mode-card"><span>❤️</span><b>Personal</b><small>Journal & habits</small></a>
+  <a href="/planning-tools/" class="mode-card"><span>🎯</span><b>Planning</b><small>Plan & prioritize</small></a>
+  <a href="/chill-tools/" class="mode-card"><span>🌿</span><b>Chill</b><small>Reset & reflect</small></a>
+  <a href="/ai-tools/" class="mode-card"><span>✍️</span><b>Create</b><small>Write & generate</small></a>
+ </div></div>
+ <div class="page-card account-card"><div><h2>Account</h2><p>This static version keeps your account and activity in your browser. For production authentication, connect a secure backend before collecting real user accounts.</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-secondary" onclick="signOut()">Sign out</button><button class="btn btn-secondary" onclick="deleteLocalAccount()">Delete local account</button></div></div>
+ </div></section>`;
+}
+function premiumHTML(){return `<section class="page"><div class="container page-narrow"><a class="back-link" href="/">← Back to home</a><div class="page-card"><h1>Premium</h1><p>Premium is reserved for a future production version of Chillax.</p><h2>What can be added later</h2><ul><li>Higher usage limits.</li><li>More advanced AI tools.</li><li>Saved projects and history.</li><li>Premium-only workflows.</li></ul><div class="notice">No payment is collected by this static version. Do not enter payment details here.</div></div></div></section>`}
+function submitContact(e){e.preventDefault();const name=$("#contactName").value.trim(),email=$("#contactEmail").value.trim(),message=$("#contactMessage").value.trim();const subject=encodeURIComponent("Chillax contact from "+name);const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\n"+message);$("#contactStatus").innerHTML='<div class="success">Your email application will open. Please review the message before sending.</div>';window.location.href="mailto:?subject="+subject+"&body="+body}
+function signOut(){localStorage.removeItem(STORE_SESSION);toast("Signed out.");history.replaceState(null,"","/");renderRoute()}
+function deleteLocalAccount(){if(confirm("Delete the Chillax account stored in this browser?")){localStorage.removeItem(STORE_USER);localStorage.removeItem(STORE_SESSION);toast("Local account deleted.");history.replaceState(null,"","/");renderRoute()}}
+
+function setupHomeSearch(){
+ const search=$("#toolSearch");if(!search)return;
+ search.addEventListener("input",e=>{const q=e.target.value.toLowerCase().trim();document.querySelectorAll(".tool-card").forEach(c=>c.style.display=c.dataset.name.toLowerCase().includes(q)?"":"none")});
+}
+function renderRoute(){
+  const path=location.pathname.replace(/\/+/g,"/").replace(/\/$/,"")||"/";
+
+  const routeMap={
+    "/":"home",
+    "/ai-tools/":"all-tools",
+    "/free-tools/":"free-tools",
+    "/categories/":"categories",
+    "/blog/":"learn",
+    "/about/":"about-page",
+    "/contact/":"contact",
+    "/privacy-policy/":"privacy-policy",
+    "/terms/":"terms",
+    "/cookie-policy/":"cookie-policy",
+    "/disclaimer/":"disclaimer",
+    "/editorial-policy/":"editorial-policy",
+    "/dashboard/":"dashboard",
+    "/premium/":"premium",
+    "/personal-tools/":"personal-tools",
+    "/planning-tools/":"planning-tools",
+    "/chill-tools/":"chill-tools",
+    "/blog/how-to-use-ai-without-overcomplicating-it/":"blog-ai",
+    "/blog/simple-study-systems-that-actually-stick/":"blog-study",
+    "/blog/building-a-calmer-digital-routine/":"blog-routine"
+  };
+
+  const route=routeMap[path]||null;
+
+  if(route==="home"){
+    app.innerHTML=homeHTML();
+    setupHomeSearch();
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else if(route==="all-tools"){
+    app.innerHTML=`<section class="page"><div class="container page-narrow">
+      <a class="back-link" href="/">← Back to home</a>
+      ${allToolsHTML()}
+    </div></section>`;
+    setupHomeSearch();
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else if(route==="free-tools"){
+    app.innerHTML=`<section class="page"><div class="container page-narrow">
+      <a class="back-link" href="/">← Back to home</a>
+      ${freeToolsHTML()}
+    </div></section>`;
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else if(route==="categories"){
+    app.innerHTML=`<section class="page"><div class="container page-narrow">
+      <a class="back-link" href="/">← Back to home</a>
+      ${categoriesHTML()}
+    </div></section>`;
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else if(route==="learn"){
+    app.innerHTML=`<section class="page"><div class="container page-narrow">
+      <a class="back-link" href="/">← Back to home</a>
+      ${learnHTML()}
+    </div></section>`;
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else if(["personal-tools","planning-tools","chill-tools"].includes(route)){
+    const section={
+      "personal-tools":`<section class="page"><div class="container"><a class="back-link" href="/">← Back to home</a>${homeHTML().match(/<section id="personal-tools">[\\s\\S]*?<\\/section>/)?.[0]||""}</div></section>`,
+      "planning-tools":`<section class="page"><div class="container"><a class="back-link" href="/">← Back to home</a>${homeHTML().match(/<section id="planning-tools">[\\s\\S]*?<\\/section>/)?.[0]||""}</div></section>`,
+      "chill-tools":`<section class="page"><div class="container"><a class="back-link" href="/">← Back to home</a>${homeHTML().match(/<section id="chill-tools">[\\s\\S]*?<\\/section>/)?.[0]||""}</div></section>`
+    }[route];
+    app.innerHTML=section;
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else if(route==="dashboard"){
+    app.innerHTML=dashboardHTML();
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else if(route==="premium"){
+    app.innerHTML=premiumHTML();
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else if(pages[route]){
+    app.innerHTML=pageHTML(route);
+    window.scrollTo({top:0,behavior:"smooth"});
+  }else{
+    app.innerHTML=`<section class="page"><div class="container page-narrow"><div class="page-card"><h1>Page not found</h1><p>The page you requested does not exist.</p><a class="btn btn-primary" href="/">Return home</a></div></div></section>`;
+    window.scrollTo({top:0,behavior:"smooth"});
+  }
+}
+window.addEventListener("load",renderRoute);
+</script>
+</body>
+</html>
