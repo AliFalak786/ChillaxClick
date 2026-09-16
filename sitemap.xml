@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://chillax.click/</loc><lastmod>2026-09-16</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://chillax.click/ai-tools/</loc><lastmod>2026-09-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://chillax.click/free-tools/</loc><lastmod>2026-09-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://chillax.click/categories/</loc><lastmod>2026-09-16</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://chillax.click/blog/</loc><lastmod>2026-09-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://chillax.click/about/</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://chillax.click/contact/</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://chillax.click/privacy-policy/</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://chillax.click/terms/</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://chillax.click/cookie-policy/</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://chillax.click/disclaimer/</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://chillax.click/editorial-policy/</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chillax.click/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/ai-tools/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/free-tools/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/categories/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/blog/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/about/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/contact/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/privacy-policy/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/terms/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/cookie-policy/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/disclaimer/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/editorial-policy/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/dashboard/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/premium/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/personal-tools/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/planning-tools/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/chill-tools/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/blog/how-to-use-ai-without-overcomplicating-it/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/blog/simple-study-systems-that-actually-stick/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://chillax.click/blog/building-a-calmer-digital-routine/</loc><changefreq>weekly</changefreq></url>
 </urlset>
