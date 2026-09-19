@@ -3,11 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Free AI and everyday tools that make life easier. Write, study, plan, create and reset with simple tools designed for zero stress.">
+<meta name="description" content="Chillax — free AI and everyday tools that make life easier. Write, study, plan, create and reset with simple tools designed for zero stress.">
 <meta name="theme-color" content="#0B0F0E">
-<title>Categories — Chillax</title>
+<title>Chillax — Smart Tools. Zero Stress.</title>
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="canonical" href="https://chillax.click/categories/">
 <style>
 :root{--bg:#0B0F0E;--surface:#121817;--surface-2:#17201D;--accent:#7DE2B8;--accent-2:#5FD6A2;--accent-soft:#16352B;--text:#F2F5F3;--muted:#9AA7A1;--border:#24302B;--danger:#ff8e8e;--shadow:0 18px 60px rgba(0,0,0,.28);--radius:18px;--max:1180px}
 html.light{--bg:#F6F8F7;--surface:#FFF;--surface-2:#EEF3F0;--accent:#3DBB82;--accent-2:#2DA66F;--accent-soft:#E2F5EC;--text:#18201C;--muted:#68736D;--border:#E1E7E3;--shadow:0 18px 55px rgba(25,45,36,.10)}
@@ -326,11 +325,11 @@ ${allToolsHTML()}${freeToolsHTML()}${categoriesHTML()}${learnHTML()}
 function toolCard(icon,title,desc,id,pill){return `<article class="card tool-card" data-name="${esc(title)}"><div class="tool-icon">${icon}</div><h3>${title}</h3><p>${desc}</p><div class="card-footer"><span class="pill">${pill}</span><button class="open-tool" onclick="openTool('${id}')">Open →</button></div></article>`}
 function allToolsHTML(){return `<section class="tool-section" id="all-tools"><div class="container"><div class="section-head"><div><h2>AI &amp; creative tools</h2><p>Useful helpers for writing, study, creativity, stylish text and everyday productivity.</p></div></div><input class="search" id="toolSearch" type="search" placeholder="Search tools…"><div class="grid" id="aiToolGrid">${toolCard("✍️","AI Rewriter","Rewrite text to make it clearer, smoother or more natural.","rewriter","AI")}${toolCard("📝","AI Summarizer","Turn long notes or pasted text into a concise summary.","summarizer","AI")}${toolCard("🎓","AI Study Helper","Break a topic into explanations, key points and practice questions.","study","AI")}${toolCard("💡","AI Idea Generator","Generate practical ideas for projects, content, names and more.","ideas","AI")}${toolCard("✨","Stylish Text Generator","Create bold, script, gothic, bubble, circled, monospace and many more text styles.","stylish-text","Free")}</div></div></section>`}
 function freeToolsHTML(){return `<section id="free-tools"><div class="container"><div class="section-head"><div><h2>Free utility tools</h2><p>Fast browser-based tools that do useful jobs without an account.</p></div></div><div class="grid">${toolCard("🔢","Word Counter","Count words, characters and approximate reading time instantly.","word-counter","Free")}${toolCard("🔳","QR Generator","Create a QR code from a URL or any short text.","qr","Free")}${toolCard("Aa","Case Converter","Convert text to uppercase, lowercase or title case.","case","Free")}</div></div></section>`}
-function categoriesHTML(){return `<section id="categories"><div class="container"><div class="section-head"><div><h2>Explore by category</h2><p>Find the kind of help you need without digging through a huge tool list.</p></div></div><div class="category-grid"><a class="category" href="/chill-tools/"><span class="category-icon">🧘</span><span><b>Chill</b><small>Reset & relax</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">✍️</span><span><b>Write</b><small>Writing helpers</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">🎓</span><span><b>Study</b><small>Learn smarter</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">💡</span><span><b>Create</b><small>Ideas & inspiration</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">📱</span><span><b>Social</b><small>Captions & bios</small></span></a><a class="category" href="/free-tools/"><span class="category-icon">🛠️</span><span><b>Useful</b><small>Everyday utilities</small></span></a><a class="category" href="/planning-tools/"><span class="category-icon">🎯</span><span><b>Planning</b><small>Get things done</small></span></a><a class="category" href="/personal-tools/"><span class="category-icon">❤️</span><span><b>Personal</b><small>Your Chillax space</small></span></a></div></div></section>`}
-function learnHTML(){return `<section id="learn"><div class="container"><div class="section-head"><div><h2>Latest from the Chillax Blog</h2><p>Practical guides for AI, productivity, study and calmer digital routines.</p></div><a class="text-link" href="/blog/how-to-use-ai-without-overcomplicating-it/">Read a guide →</a></div><div class="grid">
-<a class="card blog-card" href="/blog/how-to-use-ai-without-overcomplicating-it/"><div class="tool-icon">🤖</div><h3>How to Use AI Without Overcomplicating It</h3><p>A practical guide to getting useful results from AI without building a complicated workflow.</p><span class="text-link">Read article →</span></a>
-<a class="card blog-card" href="/blog/simple-study-systems-that-actually-stick/"><div class="tool-icon">📚</div><h3>Simple Study Systems That Actually Stick</h3><p>Small planning, focus and review habits that make it easier to start and keep going.</p><span class="text-link">Read article →</span></a>
-<a class="card blog-card" href="/blog/building-a-calmer-digital-routine/"><div class="tool-icon">🌱</div><h3>Building a Calmer Digital Routine</h3><p>Practical ways to reduce digital clutter and create a routine that feels easier to maintain.</p><span class="text-link">Read article →</span></a>
+function categoriesHTML(){return `<section id="categories"><div class="container"><div class="section-head"><div><h2>Explore by category</h2><p>Find the kind of help you need without digging through a huge tool list.</p></div></div><div class="category-grid"><a class="category" href="/chill/"><span class="category-icon">🧘</span><span><b>Chill</b><small>Reset & relax</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">✍️</span><span><b>Write</b><small>Writing helpers</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">🎓</span><span><b>Study</b><small>Learn smarter</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">💡</span><span><b>Create</b><small>Ideas & inspiration</small></span></a><a class="category" href="/ai-tools/"><span class="category-icon">📱</span><span><b>Social</b><small>Captions & bios</small></span></a><a class="category" href="/free-tools/"><span class="category-icon">🛠️</span><span><b>Useful</b><small>Everyday utilities</small></span></a><a class="category" href="/planning/"><span class="category-icon">🎯</span><span><b>Planning</b><small>Get things done</small></span></a><a class="category" href="/personal/"><span class="category-icon">❤️</span><span><b>Personal</b><small>Your Chillax space</small></span></a></div></div></section>`}
+function learnHTML(){return `<section id="learn"><div class="container"><div class="section-head"><div><h2>Latest from the Chillax Blog</h2><p>Practical guides for AI, productivity, study and calmer digital routines.</p></div><a class="text-link" href="/blog/ai/">Read a guide →</a></div><div class="grid">
+<a class="card blog-card" href="/blog/ai/"><div class="tool-icon">🤖</div><h3>How to Use AI Without Overcomplicating It</h3><p>A practical guide to getting useful results from AI without building a complicated workflow.</p><span class="text-link">Read article →</span></a>
+<a class="card blog-card" href="/blog/study/"><div class="tool-icon">📚</div><h3>Simple Study Systems That Actually Stick</h3><p>Small planning, focus and review habits that make it easier to start and keep going.</p><span class="text-link">Read article →</span></a>
+<a class="card blog-card" href="/blog/routine/"><div class="tool-icon">🌱</div><h3>Building a Calmer Digital Routine</h3><p>Practical ways to reduce digital clutter and create a routine that feels easier to maintain.</p><span class="text-link">Read article →</span></a>
 </div></div></section>`}
 
 const pages={
@@ -342,7 +341,7 @@ const pages={
 "terms":{title:"Terms & Conditions",body:`<p><strong>Last updated: September 15, 2026</strong></p><p>By using Chillax, you agree to use the website responsibly and lawfully.</p><h2>Use of the website</h2><p>You may use the available tools for lawful personal or business purposes. Do not attempt to disrupt the website, abuse external services, or use the tools for unlawful activity.</p><h2>Accounts</h2><p>The current account feature is a browser-only demonstration. It is not a secure production authentication system. Do not use a password that you use for another important service.</p><h2>Availability</h2><p>We aim to keep the website useful and available, but features may change, be removed or temporarily become unavailable.</p><h2>Intellectual property</h2><p>The Chillax name, design and original website content belong to their respective owner unless otherwise stated. Do not copy substantial portions of the website without permission.</p><h2>Limitation</h2><p>Use the tools at your own discretion. Chillax does not guarantee that every result will be accurate or suitable for a particular purpose.</p>`},
 "blog-ai":{title:"How to Use AI Without Overcomplicating It",body:`<p><strong>Practical guide · Chillax Blog</strong></p><p>AI can be useful without becoming another complicated project to manage. The easiest approach is to start with the task you already need to finish and use AI for one clear part of it.</p><h2>Start with the outcome</h2><p>Before opening a tool, decide what a useful result looks like. Instead of asking for “help with studying,” ask for a short explanation, a set of practice questions or a simple revision plan.</p><h2>Give useful context</h2><p>Good instructions usually include the goal, the audience, the tone and any limits. If you want a short answer, say so. If you want examples, ask for them.</p><h2>Check the result</h2><p>AI output can sound confident while still being incomplete or wrong. Treat it as a starting point, then verify important facts and adapt the result to your situation.</p><div class="notice">Chillax's built-in AI-style tools on this static version use browser logic. They do not connect to a live AI model unless a secure backend is added later.</div><p><a class="btn btn-primary" href="/ai-tools/">Try the tools →</a></p>`},
 "blog-study":{title:"Simple Study Systems That Actually Stick",body:`<p><strong>Practical guide · Chillax Blog</strong></p><p>A study system does not need dozens of apps. A simple loop of planning, focused work, recall and review can be easier to repeat.</p><h2>Choose one target</h2><p>Start each session by writing one specific outcome. For example, instead of “study biology,” choose “explain photosynthesis in my own words.”</p><h2>Use focused blocks</h2><p>Work for a manageable block, remove obvious distractions and take a short break before the next block. The goal is consistent attention, not an exhausting marathon.</p><h2>Test yourself</h2><p>Close your notes and explain the idea from memory. Practice questions and short self-tests reveal what you actually remember.</p><h2>Review later</h2><p>Come back to important material after some time has passed. A short review can be more useful than repeatedly rereading the same page.</p><p><a class="btn btn-primary" href="/ai-tools/">Open Study Helper →</a></p>`},
-"blog-routine":{title:"Building a Calmer Digital Routine",body:`<p><strong>Practical guide · Chillax Blog</strong></p><p>A calmer digital routine is less about quitting technology and more about making your most common actions intentional.</p><h2>Reduce the starting friction</h2><p>Keep the tools you use most visible and remove shortcuts that constantly pull your attention away from what you intended to do.</p><h2>Make a short daily plan</h2><p>Choose one or two important outcomes and a few optional tasks. A plan that leaves room for real life is easier to maintain than a packed schedule.</p><h2>Create a stopping point</h2><p>Before finishing work, write down unfinished tasks and the next step. This makes it easier to stop without carrying the whole list around in your head.</p><h2>Keep your reset simple</h2><p>A short breathing exercise, a journal entry or writing down three good things can give your day a deliberate ending.</p><p><a class="btn btn-primary" href="/chill-tools/">Try a Chill tool →</a></p>`},
+"blog-routine":{title:"Building a Calmer Digital Routine",body:`<p><strong>Practical guide · Chillax Blog</strong></p><p>A calmer digital routine is less about quitting technology and more about making your most common actions intentional.</p><h2>Reduce the starting friction</h2><p>Keep the tools you use most visible and remove shortcuts that constantly pull your attention away from what you intended to do.</p><h2>Make a short daily plan</h2><p>Choose one or two important outcomes and a few optional tasks. A plan that leaves room for real life is easier to maintain than a packed schedule.</p><h2>Create a stopping point</h2><p>Before finishing work, write down unfinished tasks and the next step. This makes it easier to stop without carrying the whole list around in your head.</p><h2>Keep your reset simple</h2><p>A short breathing exercise, a journal entry or writing down three good things can give your day a deliberate ending.</p><p><a class="btn btn-primary" href="/chill/">Try a Chill tool →</a></p>`},
 "editorial-policy":{title:"Editorial Policy",body:`<p><strong>Last updated: September 15, 2026</strong></p><p>Chillax aims to publish clear, useful and reader-focused information about online tools, AI, productivity and everyday digital workflows.</p><h2>Our standards</h2><ul><li>Keep explanations understandable and practical.</li><li>Distinguish tool capabilities from claims about future functionality.</li><li>Correct material errors when they are identified.</li><li>Avoid presenting automated output as professional advice.</li><li>Disclose important third-party dependencies when relevant.</li></ul><h2>Corrections</h2><p>If you find an inaccurate statement or broken feature, contact us with the page and the specific issue so it can be reviewed.</p>`}
 };
 
@@ -373,101 +372,55 @@ function dashboardHTML(){
   <div class="page-card"><div class="section-head"><div><h2>Recent activity</h2><p>Your latest tool opens on this browser.</p></div></div><div class="activity-list">${recentHTML}</div></div>
  </div>
  <div class="page-card"><div class="section-head"><div><h2>Choose your mode</h2><p>Match the tool to what you need right now.</p></div></div><div class="mode-grid">
-  <a href="/personal-tools/" class="mode-card"><span>❤️</span><b>Personal</b><small>Journal & habits</small></a>
-  <a href="/planning-tools/" class="mode-card"><span>🎯</span><b>Planning</b><small>Plan & prioritize</small></a>
-  <a href="/chill-tools/" class="mode-card"><span>🌿</span><b>Chill</b><small>Reset & reflect</small></a>
+  <a href="/personal/" class="mode-card"><span>❤️</span><b>Personal</b><small>Journal & habits</small></a>
+  <a href="/planning/" class="mode-card"><span>🎯</span><b>Planning</b><small>Plan & prioritize</small></a>
+  <a href="/chill/" class="mode-card"><span>🌿</span><b>Chill</b><small>Reset & reflect</small></a>
   <a href="/ai-tools/" class="mode-card"><span>✍️</span><b>Create</b><small>Write & generate</small></a>
  </div></div>
  <div class="page-card account-card"><div><h2>Account</h2><p>This static version keeps your account and activity in your browser. For production authentication, connect a secure backend before collecting real user accounts.</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-secondary" onclick="signOut()">Sign out</button><button class="btn btn-secondary" onclick="deleteLocalAccount()">Delete local account</button></div></div>
  </div></section>`;
 }
 function premiumHTML(){return `<section class="page"><div class="container page-narrow"><a class="back-link" href="/">← Back to home</a><div class="page-card"><h1>Premium</h1><p>Premium is reserved for a future production version of Chillax.</p><h2>What can be added later</h2><ul><li>Higher usage limits.</li><li>More advanced AI tools.</li><li>Saved projects and history.</li><li>Premium-only workflows.</li></ul><div class="notice">No payment is collected by this static version. Do not enter payment details here.</div></div></div></section>`}
-function submitContact(e){e.preventDefault();const name=$("#contactName").value.trim(),email=$("#contactEmail").value.trim(),message=$("#contactMessage").value.trim();const subject=encodeURIComponent("Chillax contact from "+name);const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\n"+message);$("#contactStatus").innerHTML='<div class="success">Your email application will open. Please review the message before sending.</div>';window.location.href="mailto:?subject="+subject+"&body="+body}
-function signOut(){localStorage.removeItem(STORE_SESSION);toast("Signed out.");history.replaceState(null,"","/");renderRoute()}
-function deleteLocalAccount(){if(confirm("Delete the Chillax account stored in this browser?")){localStorage.removeItem(STORE_USER);localStorage.removeItem(STORE_SESSION);toast("Local account deleted.");history.replaceState(null,"","/");renderRoute()}}
+function submitContact(e){e.preventDefault();const name=$("/contact/Name").value.trim(),email=$("/contact/Email").value.trim(),message=$("/contact/Message").value.trim();const subject=encodeURIComponent("Chillax contact from "+name);const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\n"+message);$("/contact/Status").innerHTML='<div class="success">Your email application will open. Please review the message before sending.</div>';window.location.href="mailto:?subject="+subject+"&body="+body}
+function signOut(){localStorage.removeItem(STORE_SESSION);toast("Signed out.");location.href="/"}
+function deleteLocalAccount(){if(confirm("Delete the Chillax account stored in this browser?")){localStorage.removeItem(STORE_USER);localStorage.removeItem(STORE_SESSION);toast("Local account deleted.");location.href="/"}}
 
 function setupHomeSearch(){
  const search=$("#toolSearch");if(!search)return;
  search.addEventListener("input",e=>{const q=e.target.value.toLowerCase().trim();document.querySelectorAll(".tool-card").forEach(c=>c.style.display=c.dataset.name.toLowerCase().includes(q)?"":"none")});
 }
+function pathKey(){
+ const p=window.location.pathname.replace(/\\+/g,"/").replace(/\/+/g,"/").replace(/\/$/,"").toLowerCase();
+ const map={
+  "":"home","/":"home",
+  "/ai-tools":"all-tools","/free-tools":"free-tools","/categories":"categories","/blog":"learn",
+  "/about":"about-page","/contact":"contact","/dashboard":"dashboard","/premium":"premium",
+  "/privacy-policy":"privacy-policy","/terms":"terms","/cookie-policy":"cookie-policy",
+  "/disclaimer":"disclaimer","/editorial-policy":"editorial-policy",
+  "/personal":"personal-tools","/planning":"planning-tools","/chill":"chill-tools",
+  "/blog/ai":"blog-ai","/blog/study":"blog-study","/blog/routine":"blog-routine"
+ };
+ return map[p]||"home";
+}
+function personalHTML(){return `<section class="page"><div class="container"><div class="section-head"><div><h1>Personal Tools</h1><p>Small tools for reflection, habits and keeping your day manageable.</p></div></div><div class="grid">${toolCard("📓","Daily Journal","Write a private daily entry and save it in your browser.","journal","Personal")}${toolCard("✅","Habit Tracker","Check off three daily habits and keep your progress locally.","habit-tracker","Personal")}</div></div></section>`}
+function planningHTML(){return `<section class="page"><div class="container"><div class="section-head"><div><h1>Planning Tools</h1><p>Turn a busy list into a clear plan and decide what deserves your attention first.</p></div></div><div class="grid">${toolCard("🗓️","Day Planner","Build a realistic schedule from your available hours and top priorities.","day-planner","Planning")}${toolCard("🎯","Priority Matrix","Sort tasks into do now, schedule, delegate or drop.","priority-matrix","Planning")}</div></div></section>`}
+function chillHTML(){return `<section class="page"><div class="container"><div class="section-head"><div><h1>Chill Tools</h1><p>Simple browser-based resets for a slower, lighter moment.</p></div></div><div class="grid">${toolCard("🌬️","Breathing Reset","Follow a gentle paced breathing exercise for 60 seconds.","breathing-reset","Chill")}${toolCard("🌿","3 Good Things","Capture three positive moments from your day and save the reflection locally.","gratitude","Chill")}</div></div></section>`}
 function renderRoute(){
-  const path=location.pathname.replace(/\/+/g,"/").replace(/\/$/,"")||"/";
-
-  const routeMap={
-    "/":"home",
-    "/ai-tools":"all-tools",
-    "/free-tools":"free-tools",
-    "/categories":"categories",
-    "/blog":"learn",
-    "/about":"about-page",
-    "/contact":"contact",
-    "/privacy-policy":"privacy-policy",
-    "/terms":"terms",
-    "/cookie-policy":"cookie-policy",
-    "/disclaimer":"disclaimer",
-    "/editorial-policy":"editorial-policy",
-    "/dashboard":"dashboard",
-    "/premium":"premium",
-    "/personal-tools":"personal-tools",
-    "/planning-tools":"planning-tools",
-    "/chill-tools":"chill-tools",
-    "/blog/how-to-use-ai-without-overcomplicating-it":"blog-ai",
-    "/blog/simple-study-systems-that-actually-stick":"blog-study",
-    "/blog/building-a-calmer-digital-routine":"blog-routine"
-  };
-
-  const route=routeMap[path]||null;
-
-  if(route==="home"){
-    app.innerHTML=homeHTML();
-    setupHomeSearch();
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else if(route==="all-tools"){
-    app.innerHTML=`<section class="page"><div class="container page-narrow">
-      <a class="back-link" href="/">← Back to home</a>
-      ${allToolsHTML()}
-    </div></section>`;
-    setupHomeSearch();
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else if(route==="free-tools"){
-    app.innerHTML=`<section class="page"><div class="container page-narrow">
-      <a class="back-link" href="/">← Back to home</a>
-      ${freeToolsHTML()}
-    </div></section>`;
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else if(route==="categories"){
-    app.innerHTML=`<section class="page"><div class="container page-narrow">
-      <a class="back-link" href="/">← Back to home</a>
-      ${categoriesHTML()}
-    </div></section>`;
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else if(route==="learn"){
-    app.innerHTML=`<section class="page"><div class="container page-narrow">
-      <a class="back-link" href="/">← Back to home</a>
-      ${learnHTML()}
-    </div></section>`;
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else if(["personal-tools","planning-tools","chill-tools"].includes(route)){
-    const section={
-      "personal-tools":`<section class="page"><div class="container"><a class="back-link" href="/">← Back to home</a>${homeHTML().match(/<section id="personal-tools">[\\s\\S]*?<\\/section>/)?.[0]||""}</div></section>`,
-      "planning-tools":`<section class="page"><div class="container"><a class="back-link" href="/">← Back to home</a>${homeHTML().match(/<section id="planning-tools">[\\s\\S]*?<\\/section>/)?.[0]||""}</div></section>`,
-      "chill-tools":`<section class="page"><div class="container"><a class="back-link" href="/">← Back to home</a>${homeHTML().match(/<section id="chill-tools">[\\s\\S]*?<\\/section>/)?.[0]||""}</div></section>`
-    }[route];
-    app.innerHTML=section;
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else if(route==="dashboard"){
-    app.innerHTML=dashboardHTML();
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else if(route==="premium"){
-    app.innerHTML=premiumHTML();
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else if(pages[route]){
-    app.innerHTML=pageHTML(route);
-    window.scrollTo({top:0,behavior:"smooth"});
-  }else{
-    app.innerHTML=`<section class="page"><div class="container page-narrow"><div class="page-card"><h1>Page not found</h1><p>The page you requested does not exist.</p><a class="btn btn-primary" href="/">Return home</a></div></div></section>`;
-    window.scrollTo({top:0,behavior:"smooth"});
-  }
+ const route=pathKey();
+ if(route==="home") app.innerHTML=homeHTML();
+ else if(route==="all-tools") app.innerHTML=allToolsHTML();
+ else if(route==="free-tools") app.innerHTML=freeToolsHTML();
+ else if(route==="categories") app.innerHTML=categoriesHTML();
+ else if(route==="learn") app.innerHTML=learnHTML();
+ else if(route==="personal-tools") app.innerHTML=personalHTML();
+ else if(route==="planning-tools") app.innerHTML=planningHTML();
+ else if(route==="chill-tools") app.innerHTML=chillHTML();
+ else if(route==="dashboard") app.innerHTML=dashboardHTML();
+ else if(route==="premium") app.innerHTML=premiumHTML();
+ else if(pages[route]) app.innerHTML=pageHTML(route);
+ else app.innerHTML=`<section class="page"><div class="container page-narrow"><div class="page-card"><h1>Page not found</h1><p>The page you requested does not exist.</p><a class="btn btn-primary" href="/">Return home</a></div></div></section>`;
+ setupHomeSearch();
+ window.scrollTo({top:0,behavior:"auto"});
 }
 window.addEventListener("load",renderRoute);
 </script>
