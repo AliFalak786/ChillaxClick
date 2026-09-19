@@ -1,8 +1,15 @@
-CHILLAX.CLICK — GITHUB PAGES PACKAGE (ROUTING FIXED)
+CHILLAX — CLEAN URL GITHUB STRUCTURE
 
-Built from the exact HTML file uploaded by the user.
-The clean-URL router was corrected: it now matches GitHub Pages paths after trailing-slash normalization, so /categories/, /ai-tools/, /blog/, etc. render properly.
+Upload the CONTENTS of this folder to the root of your ChillaxClick GitHub repository.
+Do not upload the outer ChillaxClick-fixed folder itself as a nested folder.
 
-Upload the CONTENTS of this folder to the ROOT of the ChillaxClick repository.
-Do not upload this outer folder or the ZIP itself.
-Keep only one root /index.html. Each clean URL folder has its own /index.html.
+Every page is a real /folder/index.html page. Navigation uses direct clean URLs only.
+No # routing and no ?page= routing is used.
+
+Required GitHub Pages setting:
+- Source: Deploy from branch
+- Branch: main
+- Folder: / (root)
+- Keep your custom domain chillax.click configured.
+
+If your repository already contains favicon.png, keep it in the repository root.
