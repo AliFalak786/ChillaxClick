@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Chillax — free AI and everyday tools that make life easier. Write, study, plan, create and reset with simple tools designed for zero stress.">
 <meta name="theme-color" content="#0B0F0E">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://chillax.click/">
+<meta property="og:site_name" content="Chillax">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chillax — Smart Tools. Zero Stress.">
+<meta property="og:description" content="Free AI and everyday tools for writing, studying, planning and relaxing.">
+<meta property="og:url" content="https://chillax.click/">
 <title>Chillax — Smart Tools. Zero Stress.</title>
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
@@ -382,7 +389,7 @@ function dashboardHTML(){
  </div></section>`;
 }
 function premiumHTML(){return `<section class="page"><div class="container page-narrow"><a class="back-link" href="/">← Back to home</a><div class="page-card"><h1>Premium</h1><p>Premium is reserved for a future production version of Chillax.</p><h2>What can be added later</h2><ul><li>Higher usage limits.</li><li>More advanced AI tools.</li><li>Saved projects and history.</li><li>Premium-only workflows.</li></ul><div class="notice">No payment is collected by this static version. Do not enter payment details here.</div></div></div></section>`}
-function submitContact(e){e.preventDefault();const name=$("/contact/Name").value.trim(),email=$("/contact/Email").value.trim(),message=$("/contact/Message").value.trim();const subject=encodeURIComponent("Chillax contact from "+name);const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\n"+message);$("/contact/Status").innerHTML='<div class="success">Your email application will open. Please review the message before sending.</div>';window.location.href="mailto:?subject="+subject+"&body="+body}
+function submitContact(e){e.preventDefault();const name=$("#contactName").value.trim(),email=$("#contactEmail").value.trim(),message=$("#contactMessage").value.trim();const subject=encodeURIComponent("Chillax contact from "+name);const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\n"+message);$("#contactStatus").innerHTML='<div class="success">Your email application will open. Please review the message before sending.</div>';window.location.href="mailto:?subject="+subject+"&body="+body}
 function signOut(){localStorage.removeItem(STORE_SESSION);toast("Signed out.");location.href="/"}
 function deleteLocalAccount(){if(confirm("Delete the Chillax account stored in this browser?")){localStorage.removeItem(STORE_USER);localStorage.removeItem(STORE_SESSION);toast("Local account deleted.");location.href="/"}}
 
@@ -406,8 +413,41 @@ function pathKey(){
 function personalHTML(){return `<section class="page"><div class="container"><div class="section-head"><div><h1>Personal Tools</h1><p>Small tools for reflection, habits and keeping your day manageable.</p></div></div><div class="grid">${toolCard("📓","Daily Journal","Write a private daily entry and save it in your browser.","journal","Personal")}${toolCard("✅","Habit Tracker","Check off three daily habits and keep your progress locally.","habit-tracker","Personal")}</div></div></section>`}
 function planningHTML(){return `<section class="page"><div class="container"><div class="section-head"><div><h1>Planning Tools</h1><p>Turn a busy list into a clear plan and decide what deserves your attention first.</p></div></div><div class="grid">${toolCard("🗓️","Day Planner","Build a realistic schedule from your available hours and top priorities.","day-planner","Planning")}${toolCard("🎯","Priority Matrix","Sort tasks into do now, schedule, delegate or drop.","priority-matrix","Planning")}</div></div></section>`}
 function chillHTML(){return `<section class="page"><div class="container"><div class="section-head"><div><h1>Chill Tools</h1><p>Simple browser-based resets for a slower, lighter moment.</p></div></div><div class="grid">${toolCard("🌬️","Breathing Reset","Follow a gentle paced breathing exercise for 60 seconds.","breathing-reset","Chill")}${toolCard("🌿","3 Good Things","Capture three positive moments from your day and save the reflection locally.","gratitude","Chill")}</div></div></section>`}
+function updatePageSEO(route){
+ const base="https://chillax.click";
+ const routeInfo={
+  home:["Chillax — Smart Tools. Zero Stress.","Free AI and everyday tools for writing, studying, planning, creating and relaxing."],
+  "all-tools":["Free AI & Creative Tools | Chillax","Explore browser-based writing, summarizing, study, idea and stylish-text tools."],
+  "free-tools":["Free Online Utility Tools | Chillax","Use free browser-based word counter, QR generator and case converter tools."],
+  categories:["Explore Tool Categories | Chillax","Find Chillax tools for writing, study, creativity, planning and personal routines."],
+  learn:["Chillax Blog | Practical AI, Study & Productivity Guides","Practical guides for using AI, studying effectively and building calmer digital routines."],
+  "personal-tools":["Personal Tools | Chillax","Journal and habit tools for personal reflection and everyday routines."],
+  "planning-tools":["Planning Tools | Chillax","Use simple day-planning and task-prioritization tools."],
+  "chill-tools":["Chill Tools | Chillax","Try simple breathing and gratitude tools for a calmer moment."],
+  "about-page":["About Chillax | Simple Everyday Tools","Learn about Chillax and its approach to useful, straightforward online tools."],
+  contact:["Contact Chillax","Contact Chillax with questions, suggestions and bug reports."],
+  "privacy-policy":["Privacy Policy | Chillax","Read how Chillax handles browser storage and third-party tool requests."],
+  "cookie-policy":["Cookie Policy | Chillax","Learn about browser storage and preferences used by Chillax."],
+  disclaimer:["Disclaimer | Chillax","Important information about using Chillax tools and their results."],
+  terms:["Terms & Conditions | Chillax","Terms for using the Chillax website and browser-based tools."],
+  "editorial-policy":["Editorial Policy | Chillax","Chillax standards for clear, useful and reader-focused information."],
+  "blog-ai":["How to Use AI Without Overcomplicating It | Chillax","A practical guide to using AI for one clear task and checking the result."],
+  "blog-study":["Simple Study Systems That Actually Stick | Chillax","Build a repeatable study loop with planning, focused work, recall and review."],
+  "blog-routine":["Building a Calmer Digital Routine | Chillax","Practical ways to reduce digital clutter and create a manageable routine."],
+  premium:["Premium | Chillax","Information about potential future Chillax premium features."]
+ };
+ const info=routeInfo[route]||["Page Not Found | Chillax","The requested Chillax page could not be found."];
+ document.title=info[0];
+ let desc=document.querySelector('meta[name="description"]');if(desc)desc.content=info[1];
+ let canonical=document.querySelector('link[rel="canonical"]');if(canonical)canonical.href=base+(route==="home"?"":({"all-tools":"/ai-tools/","free-tools":"/free-tools/",categories:"/categories/",learn:"/blog/","personal-tools":"/personal/","planning-tools":"/planning/","chill-tools":"/chill/","about-page":"/about/",contact:"/contact/","privacy-policy":"/privacy-policy/","cookie-policy":"/cookie-policy/",disclaimer:"/disclaimer/",terms:"/terms/","editorial-policy":"/editorial-policy/","blog-ai":"/blog/ai/","blog-study":"/blog/study/","blog-routine":"/blog/routine/",premium:"/premium/"}[route]||"/"));
+ const robots=document.querySelector('meta[name="robots"]');if(robots)robots.content=(route==="dashboard"||route==="premium"||!routeInfo[route])?"noindex,follow":"index,follow,max-image-preview:large";
+ const ogTitle=document.querySelector('meta[property="og:title"]');if(ogTitle)ogTitle.content=info[0];
+ const ogDesc=document.querySelector('meta[property="og:description"]');if(ogDesc)ogDesc.content=info[1];
+ const ogUrl=document.querySelector('meta[property="og:url"]');if(ogUrl&&canonical)ogUrl.content=canonical.href;
+}
 function renderRoute(){
  const route=pathKey();
+ updatePageSEO(route);
  if(route==="home") app.innerHTML=homeHTML();
  else if(route==="all-tools") app.innerHTML=allToolsHTML();
  else if(route==="free-tools") app.innerHTML=freeToolsHTML();
@@ -421,9 +461,9 @@ function renderRoute(){
  else if(pages[route]) app.innerHTML=pageHTML(route);
  else app.innerHTML=`<section class="page"><div class="container page-narrow"><div class="page-card"><h1>Page not found</h1><p>The page you requested does not exist.</p><a class="btn btn-primary" href="/">Return home</a></div></div></section>`;
  setupHomeSearch();
- window.scrollTo({top:0,behavior:"auto"});
 }
-window.addEventListener("load",renderRoute);
+
+renderRoute();
 </script>
 </body>
 </html>
