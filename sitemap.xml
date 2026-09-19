@@ -1,22 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://chillax.click/</loc></url>
-  <url><loc>https://chillax.click/ai-tools/</loc></url>
-  <url><loc>https://chillax.click/free-tools/</loc></url>
-  <url><loc>https://chillax.click/categories/</loc></url>
-  <url><loc>https://chillax.click/blog/</loc></url>
-  <url><loc>https://chillax.click/about/</loc></url>
-  <url><loc>https://chillax.click/contact/</loc></url>
-  <url><loc>https://chillax.click/dashboard/</loc></url>
-  <url><loc>https://chillax.click/privacy-policy/</loc></url>
-  <url><loc>https://chillax.click/terms/</loc></url>
-  <url><loc>https://chillax.click/cookie-policy/</loc></url>
-  <url><loc>https://chillax.click/disclaimer/</loc></url>
-  <url><loc>https://chillax.click/editorial-policy/</loc></url>
-  <url><loc>https://chillax.click/personal/</loc></url>
-  <url><loc>https://chillax.click/planning/</loc></url>
-  <url><loc>https://chillax.click/chill/</loc></url>
-  <url><loc>https://chillax.click/blog/ai/</loc></url>
-  <url><loc>https://chillax.click/blog/study/</loc></url>
-  <url><loc>https://chillax.click/blog/routine/</loc></url>
+
+  <url>
+    <loc>https://chillax.click/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/ai-tools/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/free-tools/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/categories/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/blog/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/about/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/contact/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/privacy-policy/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/terms/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/cookie-policy/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/disclaimer/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/editorial-policy/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/personal/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/planning/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/chill/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/blog/ai/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/blog/study/</loc>
+  </url>
+
+  <url>
+    <loc>https://chillax.click/blog/routine/</loc>
+  </url>
+
 </urlset>
